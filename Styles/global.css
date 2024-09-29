@@ -5,6 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(28, 34, 53);
+    background-image: url("../Images/Background/argyle.png");
     color: rgb(255, 255, 255);
   }
   
@@ -18,7 +19,7 @@ body {
 .header-container h1 {
     font-family: 'CustomFont2';
     font-size: 2.5em;
-    color: rgb(227,212,196);
+    color: rgb(224, 212, 197);
     text-align: center;
 }
 
@@ -41,7 +42,7 @@ body {
         transform: rotate(0deg);
     }
     25% {
-        transform: rotate(20deg); 
+        transform: rotate(30deg); 
     }
     50% {
         transform: rotate(-20deg); 
@@ -59,7 +60,7 @@ body {
         transform: rotate(0deg); 
     }
     25% {
-        transform: rotate(-20deg); 
+        transform: rotate(-30deg); 
     }
     50% {
         transform: rotate(20deg); 

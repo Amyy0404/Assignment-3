@@ -19,9 +19,9 @@
   }
   
   .button img {
-    width: 400px;
+    width: 280px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 1px;
     transition: transform 0.3s ease;
   }
   

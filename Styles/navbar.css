@@ -1,6 +1,6 @@
 /* navbar.css */
 nav {
-    background-color: rgb(163, 137, 120);
+    background-color: rgb(247,237,217);
     padding: 10px 0;
   }
   
@@ -17,14 +17,8 @@ nav {
   }
   
   nav ul li a {
-    color: rgb(232, 223, 213);
-    font-size: 1.2em;
+    color: rgb(84,155,109);
+    font-size: 1.5em;
     padding: 10px;
     transition: background-color 0.3s ease;
   }
-  
-  nav ul li a:hover, 
-  nav ul li a.active {
-    border-radius: 10px;
-  }
-  
