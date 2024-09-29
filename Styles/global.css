@@ -5,7 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(28, 34, 53);
-    background-image: url("../Images/Background/argyle.png");
+    /* background-image: url("../Images/Background/argyle.png"); */
     color: rgb(255, 255, 255);
   }
   
