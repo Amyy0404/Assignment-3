@@ -1,0 +1,94 @@
+/* global.css */
+body {
+    font-family: 'CustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(28, 34, 53);
+    color: rgb(255, 255, 255);
+  }
+  
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.header-container h1 {
+    font-family: 'CustomFont2';
+    font-size: 2.5em;
+    color: rgb(227,212,196);
+    text-align: center;
+}
+
+.header-icon {
+    width: 65px; 
+    height: auto; 
+}
+
+.golf-club-left:hover {
+    animation: rotateClubLeft 1.5s ease-in-out;
+}
+
+.golf-club-right:hover {
+    animation: rotateClubRight 1.5s ease-in-out;
+}
+
+@keyframes rotateClubLeft {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg); 
+    }
+    50% {
+        transform: rotate(-20deg); 
+    }
+    75% {
+        transform: rotate(10deg); 
+    }
+    100% {
+        transform: rotate(0deg); 
+    }
+}
+
+@keyframes rotateClubRight {
+    0% {
+        transform: rotate(0deg); 
+    }
+    25% {
+        transform: rotate(-20deg); 
+    }
+    50% {
+        transform: rotate(20deg); 
+    }
+    75% {
+        transform: rotate(-10deg); 
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+  
+a {
+    color: inherit;
+  }
+  
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('../Fonts/MyFont1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CustomFont2';
+    src: url('../Fonts/MyFont2.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+
+  

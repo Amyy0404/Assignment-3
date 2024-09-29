@@ -1,0 +1,30 @@
+/* navbar.css */
+nav {
+    background-color: rgb(163, 137, 120);
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: rgb(232, 223, 213);
+    font-size: 1.2em;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover, 
+  nav ul li a.active {
+    border-radius: 10px;
+  }
+  

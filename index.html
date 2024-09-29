@@ -7,6 +7,13 @@
   <meta name="author" content="Amy Janse van Vuuren">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="./Styles/global.css">
+  <link rel="stylesheet" href="./Styles/main-content.css">
+  <link rel="stylesheet" href="./Styles/footer.css">
+  <link rel="stylesheet" href="./Styles/responsive.css">
+  <link rel="stylesheet" href="./Styles/hr.css">
+
+
   <script src="./Scripts/nav.js" defer></script>
 
   <title>Home Page</title>
@@ -14,17 +21,47 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to the Home Page</h1>
-  </header>
+    <hr>
+    <div class="header-container">
+        <img src="Images/Icons/Icon3.png" alt="Left Icon" class="header-icon golf-club-left">
+        <h1>WELCOME TO THE HOME PAGE</h1>
+        <img src="Images/Icons/Icon4.png" alt="Right Icon" class="header-icon golf-club-right">
+    </div>
+    <hr>
+    <hr>
+</header>
 
+  <div class="main-content"></div>
+    <div class="button-container">
+      <div class="button">
+        <p class="button-text">DESIGNS</p>
+        <a href="./Design/index.html" class="button" title="">
+          <img src="Images/shot1.png" alt="Look at my designs" class="responsive"> 
+        </a>
+      </div>
 
+      <div class="button">
+        <p class="button-text">THEORY</p>
+        <a href="./Theory/index.html" class="button" title="">
+          <img src="Images/shot2.png" alt="Look at my theory" class="responsive">
+        </a>
+      </div>
 
-  <footer></footer>
-    <span class="p-name">Amy Janse van Vuuren</span><br>
-    <a class="u-email" href="mailto:fake@gmail.com">fake@gmail.com</a><br>
-    <span class="p-org">University of the Witwatersrand</span><br>
-    <span class="p-locality">Johannesburg</span><br>
-    <span class="p-country-name">South Africa</span><br>
+      <div class="button">
+        <p class="button-text">VISUALISATIONS</p>
+        <a href="./Visualisation/index.html" class="button" title="">
+          <img src="Images/shot3.png" alt="Look at my visualisations" class="responsive">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="p-name">Amy Janse van Vuuren -</span>
+    <a class="u-email" href="mailto:fake@gmail.com"> fake@gmail.com -</a>
+    <span class="p-org"> University of the Witwatersrand -</span>
+    <span class="p-locality"> Johannesburg -</span>
+    <span class="p-country-name"> South Africa </span>
   </footer>
 
 </body>

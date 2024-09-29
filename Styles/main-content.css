@@ -1,0 +1,60 @@
+/* main-content.css */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Button container on index page */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+  }
+  
+  .button {
+    text-align: center;
+  }
+  
+  .button img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .button img:hover {
+    transform: scale(1.1);
+  }
+  
+  .button-text {
+    font-family: 'CustomFont3', sans-serif;
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: rgb(232, 223, 213);
+  }
+  
+  /* Responsiveness for main content */
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .button img {
+      width: 120px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  @font-face {
+    font-family: 'CustomFont3';
+    src: url('../Fonts/MyFont3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

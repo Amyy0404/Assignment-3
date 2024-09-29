@@ -1,0 +1,33 @@
+/* footer.css */
+footer {
+    background-color: rgb(227,212,196);
+    color: rgb(182,153,133);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+  }
+  
+  footer span, 
+  footer a {
+    color: rgb(163, 137, 120);
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Flexibility for footer placement */
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  
