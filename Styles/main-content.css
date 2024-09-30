@@ -3,14 +3,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 2px;
   }
   
   /* Button container on index page */
   .button-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     margin: 40px 0;
   }
   
@@ -31,9 +31,9 @@
   
   .button-text {
     font-family: 'CustomFont3', sans-serif;
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: rgb(232, 223, 213);
+    font-size: 2em;
+    margin: 20px 0;
+    color: rgb(221, 205, 187);
   }
   
   /* Responsiveness for main content */

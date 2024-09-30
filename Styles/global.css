@@ -5,7 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(28, 34, 53);
-    /* background-image: url("../Images/Background/argyle.png"); */
+    background-image: url("../Images/Background/Test2.png");
     color: rgb(255, 255, 255);
   }
   
@@ -18,8 +18,8 @@ body {
 
 .header-container h1 {
     font-family: 'CustomFont2';
-    font-size: 2.5em;
-    color: rgb(224, 212, 197);
+    font-size: 3em;
+    color: rgb(221, 205, 187);
     text-align: center;
 }
 
