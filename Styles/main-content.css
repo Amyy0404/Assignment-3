@@ -1,60 +1,100 @@
 /* main-content.css */
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease-out, transform 1s ease-out;
+}
+
+.main-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body{
+  background-image: url("../Images/Background/Test2.png");
+}
+
+/* Button container on index page */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px 0;
+}
+
+.button {
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button img {
+  width: 280px;
+  height: auto;
+  border-radius: 1px;
+  transition: transform 0.3s ease;
+}
+
+.button img:hover {
+  transform: scale(1.1);
+}
+
+.button-text {
+  font-family: 'CustomFont3', sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  color: rgb(221, 205, 187);
+  transition: color 0.3s ease;
+}
+
+.button:hover .button-text {
+  color: rgb(84,155,109);
+}
+
+/* Header animations */
+.header-container h1 {
+  font-family: 'CustomFont2';
+  font-size: 3em;
+  color: rgb(221, 205, 187);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
   }
-  
-  /* Button container on index page */
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsiveness for main content */
+@media (max-width: 768px) {
   .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 40px 0;
-  }
-  
-  .button {
-    text-align: center;
-  }
-  
-  .button img {
-    width: 280px;
-    height: auto;
-    border-radius: 1px;
-    transition: transform 0.3s ease;
-  }
-  
-  .button img:hover {
-    transform: scale(1.1);
-  }
-  
-  .button-text {
-    font-family: 'CustomFont3', sans-serif;
-    font-size: 2em;
-    margin: 20px 0;
-    color: rgb(221, 205, 187);
-  }
-  
-  /* Responsiveness for main content */
-  @media (max-width: 768px) {
-    .button-container {
       flex-direction: column;
-    }
-  
-    .button img {
-      width: 120px;
-    }
-  
-    h1 {
-      font-size: 2em;
-    }
   }
 
-  @font-face {
-    font-family: 'CustomFont3';
-    src: url('../Fonts/MyFont3.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  .button img {
+      width: 120px;
   }
-  
+
+  h1 {
+      font-size: 2em;
+  }
+}
+
+@font-face {
+  font-family: 'CustomFont3';
+  src: url('../Fonts/MyFont3.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
