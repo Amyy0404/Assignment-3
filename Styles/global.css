@@ -80,7 +80,7 @@ a {
   @font-face {
     font-family: 'CustomFont';
     src: url('../Fonts/MyFont1.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: lighter;
     font-style: normal;
   }
 
