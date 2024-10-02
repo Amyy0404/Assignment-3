@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../Styles/navbar.css">
   <link rel="stylesheet" href="../Styles/footer.css">
   <link rel="stylesheet" href="../Styles/responsive.css">
-  <link rel="stylesheet" href="../Styles/visualisation-2.css">
+  <link rel="stylesheet" href="../Styles/visualisation-1.css">
 
   <script src="../Scripts/nav.js" defer></script>
 
@@ -28,12 +28,18 @@
      <nav></nav>
  </header>
 
- <h2 style="color: #3b8b5c;">TOURNAMENT INFORMATION:</h2>
-
- <div id="bubble-chart"></div>
+ <h2 style="color: #3b8b5c;">TOP GOLF PLAYERS OF 2024</h2>
+ <label for="playerRange">AMOUNT OF PLAYERS:</label>
+ <select id="playerRange">
+     <option value="10">TOP 10</option>
+     <option value="20">TOP 20</option>
+     <option value="30">TOP 30</option>
+ </select>
+ 
+ <svg id="chart" width="700" height="600"></svg>
 
  <script src="https://d3js.org/d3.v7.min.js"></script>
- <script src="../Scripts/dataViz-2.js"></script>
+ <script src="../Scripts/dataViz-1.js"></script>
 
   <footer>
     <span class="p-name">Amy Janse van Vuuren -</span>
@@ -45,4 +51,3 @@
 
 </body>
 </html>
-

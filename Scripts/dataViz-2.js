@@ -50,7 +50,6 @@ function createBubbles(data) {
         .attr("r", d => rScale(d.purse.$numberInt))
         .style("fill", d => colorScale(d.name))
         .on("mouseover", function (event, d) {
-            d3.select(this).style("stroke", "#000");
             showTooltip(d);
         })
         .on("mouseout", function () {
@@ -70,12 +69,11 @@ let tooltip = d3.select("body")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute")
-    .style("background-color", "white")
-    .style("padding", "5px")
-    .style("border", "1px solid #ccc")
-    .style("border-radius", "4px")
+    .style("background-color", "#285f3f")
+    .style("padding", "10px")
+    .style("border-radius", "2px")
     .style("visibility", "hidden")
-    .style("color", "black")
+    .style("color", "white")
     .style("font-size", "14px")
     .style("pointer-events", "none");
 

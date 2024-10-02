@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="../Styles/navbar.css">
   <link rel="stylesheet" href="../Styles/footer.css">
   <link rel="stylesheet" href="../Styles/responsive.css">
+  <link rel="stylesheet" href="../Styles/visualisation-2.css">
 
   <script src="../Scripts/nav.js" defer></script>
 
-  <title>Design Page</title>
+  <title>Visualisation Page</title>
 
 </head>
 <body>
@@ -27,22 +28,12 @@
      <nav></nav>
  </header>
 
- <div class="button">
-    <div class="button">
-      <p class="button-text">TOP GOLF PLAYERS OF 2024</p>
-      <a href="../Visualisation/data-viz-1.html" class="button" title="">
-        <img src="../Images/" alt="Look at my designs" class="responsive"> 
-      </a>
-    </div>
+ <h2 style="color: #3b8b5c;">2024 TOURNAMENT WINNINGS INFORMATION</h2>
 
-    <div class="button">
-      <p class="button-text">2024 TOURNAMENT INFORMATION</p>
-      <a href="../Visualisation/data-viz-2.html" class="button" title="">
-        <img src="../Images/" alt="Look at my theory" class="responsive">
-      </a>
-    </div>
- </div>
+ <div id="bubble-chart"></div>
 
+ <script src="https://d3js.org/d3.v7.min.js"></script>
+ <script src="../Scripts/dataViz-2.js"></script>
 
   <footer>
     <span class="p-name">Amy Janse van Vuuren -</span>
@@ -54,3 +45,4 @@
 
 </body>
 </html>
+

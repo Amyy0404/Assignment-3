@@ -35,6 +35,7 @@ body {
     animation: rotateClubRight 1.5s ease-in-out;
 }
 
+
 @keyframes rotateClubLeft {
     
     0% {
