@@ -1,0 +1,48 @@
+/* Center the SVG container */
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'CustomFont3', sans-serif;
+}
+
+#bubble-chart {
+    text-align: center;
+}
+
+#controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+@font-face {
+    font-family: 'CustomFont3';
+    src: url('../Fonts/MyFont3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }

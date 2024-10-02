@@ -2,7 +2,7 @@ const url = 'https://live-golf-data.p.rapidapi.com/stats?year=2024&statId=186';
 const options = {
     method: 'GET',
     headers: {
-        'x-rapidapi-key': '032dd8c81emshafa07143ef94c8ap181e29jsna5b43f130dc6',
+        'x-rapidapi-key': '7ba9920b3dmshe6e897753e51f7cp1ffd51jsn666073a40baf',
         'x-rapidapi-host': 'live-golf-data.p.rapidapi.com'
     }
 };
