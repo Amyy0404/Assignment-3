@@ -15,13 +15,12 @@ h2{
   font-size: 2.5em;
   color: rgb(221, 205, 187);
   text-align: center;
-  margin-top: 1px;
+  margin-top: 40px;
 }
 
 .image-text-row img {
   width: 40%;
   height: auto;
-  border: 1px solid #ccc;
 }
 
 .image-text-row .text-container {
@@ -45,15 +44,21 @@ h2{
 
 /* Bookmark Sidebar Styles */
 .bookmark-sidebar {
-  margin-top: 10px;
-  position: sticky;
-  top: 20px;
+  margin-top: 170px;
+  margin-left: 7px;
+  position: fixed;
+  top: 40px;
   left: 0;
   width: 125px;
   background-color: rgb(48, 93, 63);
   padding: 10px;
-  z-index: 10;
-  opacity: 0.9;
+  z-index: 1000; /* Increased z-index for better visibility */
+  opacity: 0.95;
+}
+
+/* Adjust parent element styles if needed */
+.container-or-parent {
+  min-height: 100vh; /* Ensure enough height for sticky to work */
 }
 
 .bookmark-sidebar ul {

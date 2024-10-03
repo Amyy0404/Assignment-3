@@ -19,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
-    gap: 5px; 
+    gap: 50px; 
 }
 
 .header-container h1 {
@@ -30,9 +30,9 @@ body {
 }
 
 .header-icon {
-    width: 100px; 
+    width: 200px; 
     height: auto; 
-    opacity: 0.9;
+    margin-left: -70px;
 }
 
 .golf-club-left:hover {
