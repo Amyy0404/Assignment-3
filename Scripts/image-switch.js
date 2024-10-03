@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrow = document.getElementById('arrow');
     let currentImage = 1;
     const images = [
-        { src: '../Images/Posters/Poster-Theory.png', link: '../Visualisation/data-viz-1.html' },
-        { src: '../Images/Posters/Poster-Viz.png', link: '../Visualisation/data-viz-2.html' }
+        { src: '../Images/Posters/Data-Viz-1.png', link: '../Visualisation/data-viz-1.html' },
+        { src: '../Images/Posters/Data-Viz-2.png', link: '../Visualisation/data-viz-2.html' }
     ];
 
     // Function to handle image click and redirect
