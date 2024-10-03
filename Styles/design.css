@@ -12,7 +12,7 @@
 
 h2{
   font-family: 'CustomFont3';
-  font-size: 2em;
+  font-size: 2.5em;
   color: rgb(221, 205, 187);
   text-align: center;
 }
@@ -42,6 +42,56 @@ h2{
   margin-bottom: 10px;
 }
 
+/* Bookmark Sidebar Styles */
+.bookmark-sidebar {
+  margin-top: 10px;
+  position: sticky;
+  top: 20px;
+  left: 0;
+  width: 125px;
+  background-color: rgb(48, 93, 63);
+  padding: 10px;
+  z-index: 10;
+}
+
+.bookmark-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bookmark-sidebar ul li {
+  margin: 5px 0;
+}
+
+.bookmark-sidebar ul li a {
+  font-family: 'CustomFont', sans-serif;
+  font-weight: lighter;
+  font-size: 1em;
+  color: rgb(245, 247, 235);
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.bookmark-sidebar ul li a:hover {
+  color: rgb(198, 182, 164);
+}
+
+@media (max-width: 768px) {
+  .image-text-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-text-row img,
+  .image-text-row .text-container {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+
 @media (max-width: 768px) {
   .image-text-row {
     flex-direction: column;
@@ -56,6 +106,13 @@ h2{
 }
 
 @font-face {
+  font-family: 'CustomFont';
+  src: url('../Fonts/MyFont1.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'CustomFont2';
   src: url('../Fonts/MyFont2.otf') format('opentype');
   font-weight: lighter;
@@ -64,7 +121,7 @@ h2{
 
 @font-face {
   font-family: 'CustomFont3';
-  src: url('../Fonts/MyFont3.otf') format('opentype');
+  src: url('../Fonts/thin.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
