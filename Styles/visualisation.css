@@ -1,0 +1,55 @@
+
+/* Button and Image Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.button-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #eae7d2;
+    cursor: pointer;
+    z-index: 10;
+    right: -40px;
+}
+
+.arrow-left {
+    right: unset;
+    left: -40px;
+}
+
+.arrow:hover {
+    color: rgb(84,155,109);
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
