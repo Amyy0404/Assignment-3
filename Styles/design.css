@@ -1,0 +1,70 @@
+/* Design Page Styles */
+.image-text-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+h2{
+  font-family: 'CustomFont3';
+  font-size: 2em;
+  color: rgb(221, 205, 187);
+  text-align: center;
+}
+
+.image-text-row img {
+  width: 40%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.image-text-row .text-container {
+  width: 55%;
+  padding-left: 20px;
+}
+
+.image-text-row .text-container h3 {
+  font-family: 'CustomFont3', sans-serif;
+  font-size: 2em;
+  margin: 5px 0;
+  color: rgb(84,155,109);
+  transition: color 0.3s ease;
+}
+
+.image-text-row .text-container p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .image-text-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-text-row img,
+  .image-text-row .text-container {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+@font-face {
+  font-family: 'CustomFont2';
+  src: url('../Fonts/MyFont2.otf') format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont3';
+  src: url('../Fonts/MyFont3.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

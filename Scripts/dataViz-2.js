@@ -62,6 +62,8 @@ function createBubbles(data) {
                .attr("cy", d => d.y);
     });
 
+    
+
     simulation.force("x", forceX).alpha(0.9).restart();
 }
 
