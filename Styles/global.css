@@ -1,4 +1,10 @@
 /* global.css */
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'CustomFont', sans-serif;
     margin: 0;

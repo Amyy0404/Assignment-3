@@ -53,6 +53,7 @@ h2{
   background-color: rgb(48, 93, 63);
   padding: 10px;
   z-index: 10;
+  opacity: 0.9;
 }
 
 .bookmark-sidebar ul {
