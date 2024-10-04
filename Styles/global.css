@@ -1,6 +1,5 @@
-/* global.css */
 body, html {
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
     margin: 0;
     padding: 0;
 }

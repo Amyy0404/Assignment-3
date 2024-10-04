@@ -6,7 +6,7 @@ document.querySelectorAll('.bookmark-sidebar a').forEach(anchor => {
       const targetElement = document.getElementById(targetId);
   
       window.scrollTo({
-        top: targetElement.offsetTop - 20, // Adjust as needed for offset
+        top: targetElement.offsetTop - 20, 
         behavior: 'smooth'
       });
     });

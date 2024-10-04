@@ -1,4 +1,3 @@
-/* Design Page Styles */
 .image-text-row {
   display: flex;
   align-items: center;
@@ -42,7 +41,6 @@ h2{
   margin-bottom: 10px;
 }
 
-/* Bookmark Sidebar Styles */
 .bookmark-sidebar {
   margin-top: 170px;
   margin-left: 7px;
@@ -52,13 +50,12 @@ h2{
   width: 125px;
   background-color: rgb(48, 93, 63);
   padding: 10px;
-  z-index: 1000; /* Increased z-index for better visibility */
+  z-index: 1000;
   opacity: 0.7;
 }
 
-/* Adjust parent element styles if needed */
 .container-or-parent {
-  min-height: 100vh; /* Ensure enough height for sticky to work */
+  min-height: 100vh; 
 }
 
 .bookmark-sidebar ul {

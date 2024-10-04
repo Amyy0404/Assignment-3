@@ -1,4 +1,3 @@
-/* main-content.css */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -18,7 +17,6 @@ body{
   background-image: url("../Images/Background/Test2.png");
 }
 
-/* Button container on index page */
 .button-container {
   display: flex;
   justify-content: center;
@@ -58,7 +56,6 @@ body{
   color: rgb(84,155,109);
 }
 
-/* Header animations */
 .header-container h1 {
   font-family: 'CustomFont2';
   font-size: 2.5em;
@@ -71,14 +68,14 @@ body{
 
 .intro-paragraph {
 
-  border-left: 6px solid rgb(70, 137, 92); /* Golf-theme inspired border */
+  border-left: 6px solid rgb(70, 137, 92); 
   padding: 10px;
   margin: 10px auto;
   font-family: 'CustomFont', sans-serif;
   font-size: 1.2em;
   line-height: 0.9;
   max-width: 1000px;
-  color: rgb(221, 205, 187); /* Calm green text */
+  color: rgb(221, 205, 187); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: justify;
@@ -95,7 +92,6 @@ body{
   }
 }
 
-/* Responsiveness for main content */
 @media (max-width: 768px) {
   .button-container {
       flex-direction: column;

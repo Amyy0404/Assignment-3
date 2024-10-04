@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="description" content="Assignment 3: Commercial Website">
   <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -12,6 +13,7 @@
   <link rel="stylesheet" href="./Styles/footer.css">
   <link rel="stylesheet" href="./Styles/responsive.css">
   <link rel="stylesheet" href="./Styles/hr.css">
+  <link rel="stylesheet" href="./Styles/scrollbar.css">
 
   <script src="./Scripts/nav.js" defer></script>
   <script src="./Scripts/scroll-effect.js" defer></script>
@@ -21,38 +23,42 @@
 <body>
   <header>
     <hr>
+    <!-- Main header content with a container for the title and icons -->
     <div class="header-container">
-        <img src="Images/Icons/beige.png" alt="Left Icon" class="header-icon golf-club-left">
-        <h1 class="fade-in">AMY'S GOLF WEBSITE</h1>
-        <!-- <img src="Images/Icons/Icon6.png" alt="Right Icon" class="header-icon golf-club-right"> -->
+      <img src="Images/Icons/beige.png" alt="Left Icon" class="header-icon golf-club-left">
+
+      <h1 class="fade-in">AMY'S GOLF WEBSITE</h1>
+      <!-- <img src="Images/Icons/Icon6.png" alt="Right Icon" class="header-icon golf-club-right"> -->
     </div>
     <hr>
-    <hr>
+    
+    <!-- Introduction text that explains the theme of my website -->
     <div class="text-container intro-paragraph">
-      <p>I’ll admit it: I’ve never actually been good at golf. Like, at all. My golf ball has a mysterious talent for finding sand traps, 
+      <p>
+        I’ll admit it: I’ve never actually been good at golf. Like, at all. My golf ball has a mysterious talent for finding sand traps, 
         water hazards, and occasionally even trees. But despite my lack of Tiger Woods-level skills, there's something about golf that just 
-        makes sense to me. Plus, who doesn’t love the aesthetic of crisp greens, pastel polos, and those tiny little flags waving in the breeze? 
-     </p>So, when I was brainstorming a theme for my website, it hit me: golf. It’s a quirky, charming metaphor for navigating life—sometimes you 
+        makes sense to me. Plus, who doesn’t love the aesthetic of crisp greens, pastel polos, and those tiny little flags waving in the breeze?
+      </p>
+      <p>
+        So, when I was brainstorming a theme for my website, it hit me: golf. It’s a quirky, charming metaphor for navigating life—sometimes you 
         hit a hole-in-one, sometimes you end up in the rough, but you always keep swinging. Perfect, right?
-     <p>
-     </p>
+      </p>
     </div>
-    <p style ="color: rgb(144, 230, 134); text-align: center; opacity: 0.5;"> ~ SCROLL DOWN ~</p>
-</header>
 
+    <p style="color: rgb(144, 230, 134); text-align: center; opacity: 0.5;"> ~ SCROLL DOWN ~</p>
+  </header>
+
+  <!-- Main content section -->
   <div class="main-content fade-in-on-scroll">
-
     <div class="button-container">
+
       <div class="button">
         <p class="button-text">D E S I G N S</p>
         <a href="Design/index.html" class="button" title="">
-          <img src="Images/Posters/Poster-Designs.png" alt="Look at my designs" class="responsive"> 
+          <img src="Images/Posters/Poster-Designs.png" alt="Look at my designs" class="responsive">
         </a>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br><br><br><br>
 
       <div class="button">
         <p class="button-text">T H E O R Y</p>
@@ -60,9 +66,7 @@
           <img src="Images/Posters/Poster-Theory.png" alt="Look at my theory" class="responsive">
         </a>
       </div>
-      <br>
-      <br>
-      <br>
+      <br><br><br>
 
       <div class="button">
         <p class="button-text">V I S U A L I S A T I O N S</p>
@@ -73,6 +77,7 @@
     </div>
   </div>
 
+  <!-- Footer section providing my details -->
   <footer>
     <span class="p-name">Amy Janse van Vuuren -</span>
     <a class="u-email" href="mailto:fake@gmail.com"> fake@gmail.com -</a>
@@ -83,4 +88,3 @@
 
 </body>
 </html>
-

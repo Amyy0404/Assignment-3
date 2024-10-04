@@ -1,4 +1,3 @@
-// scroll-effects.js
 window.addEventListener('scroll', function() {
     const mainContent = document.querySelector('.main-content');
     const contentPosition = mainContent.getBoundingClientRect().top;
