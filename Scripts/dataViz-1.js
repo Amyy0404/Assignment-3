@@ -37,14 +37,14 @@ function initializeChart(data) {
         .style("padding", "10px") 
         .style("border-radius", "5px")
         .style("font-size", "15px") 
-        .style("font-family", "'CustomFont', sans-serif") 
+        .style("font-family", "'CustomFont3', sans-serif") 
         .style("position", "absolute")  
         .style("pointer-events", "none")  
         .style("z-index", 10);
 
     d3.select("#playerRange")
         .style("font-size", "18px")
-        .style("font-family", "'CustomFont3', sans-serif") 
+        .style("font-family", "CustomFont4, sans-serif") 
         .style("font-weight", "bolder") 
         .style("margin", "10px")
         .style("width", "150px") 
