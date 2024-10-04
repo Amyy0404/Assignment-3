@@ -5,14 +5,15 @@
   margin-bottom: 20px;
   max-width: 1200px;
   margin: 20px auto;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #a7a498;
   padding-bottom: 20px;
 }
 
 h2{
-  font-family: 'CustomFont3';
+  font-family: 'CustomFont4';
+  font-weight: lighter;
   font-size: 2.5em;
-  color: rgb(221, 205, 187);
+  color: rgb(184, 169, 151);
   text-align: center;
   margin-top: 40px;
 }
@@ -36,13 +37,14 @@ h2{
 }
 
 .image-text-row .text-container p {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 .bookmark-sidebar {
-  margin-top: 170px;
+  font-family: 'CustomFont3', sans-serif;
+  margin-top: 145px;
   margin-left: 7px;
   position: fixed;
   top: 40px;
@@ -51,7 +53,8 @@ h2{
   background-color: rgb(48, 93, 63);
   padding: 10px;
   z-index: 1000;
-  opacity: 0.7;
+  opacity: 1;
+  background-image: url("../Images/Background/Test2.png")
 }
 
 .container-or-parent {
@@ -68,7 +71,7 @@ h2{
 }
 
 .bookmark-sidebar ul li a {
-  font-family: 'CustomFont', sans-serif;
+  font-family: 'CustomFont3', sans-serif;
   font-weight: lighter;
   font-size: 1em;
   color: rgb(255, 255, 255);
@@ -79,7 +82,7 @@ h2{
 }
 
 .bookmark-sidebar ul li a:hover {
-  color: rgb(198, 182, 164);
+  color: rgb(184, 169, 151);
 }
 
 @media (max-width: 768px) {
@@ -111,21 +114,28 @@ h2{
 
 @font-face {
   font-family: 'CustomFont';
-  src: url('../Fonts/MyFont1.ttf') format('truetype');
+  src: url('../Fonts/Classy1.otf') format('opentype');
   font-weight: lighter;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CustomFont2';
-  src: url('../Fonts/MyFont2.otf') format('opentype');
+  src: url('../Fonts/Classy2.otf') format('opentype');
   font-weight: lighter;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CustomFont3';
-  src: url('../Fonts/thin.ttf') format('opentype');
+  src: url('../Fonts/ShortWide.ttf') format('opentype');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont4';
+  src: url('../Fonts/ThinLong.otf') format('opentype');
+  font-weight: lighter;
   font-style: normal;
 }

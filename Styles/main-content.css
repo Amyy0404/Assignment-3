@@ -45,7 +45,7 @@ body{
 }
 
 .button-text {
-  font-family: 'CustomFont3', sans-serif;
+  font-family: 'CustomFont4', sans-serif;
   font-size: 2em;
   margin: 40px 0;
   color: rgb(221, 205, 187);
@@ -58,6 +58,7 @@ body{
 
 .header-container h1 {
   font-family: 'CustomFont2';
+  font-weight: lighter;
   font-size: 2.5em;
   color: rgb(234, 220, 205);
   text-align: center;
@@ -71,7 +72,7 @@ body{
   border-left: 6px solid rgb(70, 137, 92); 
   padding: 10px;
   margin: 10px auto;
-  font-family: 'CustomFont', sans-serif;
+  font-family: 'CustomFont3', sans-serif;
   font-size: 1.2em;
   line-height: 0.9;
   max-width: 1000px;
@@ -79,7 +80,7 @@ body{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: justify;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 

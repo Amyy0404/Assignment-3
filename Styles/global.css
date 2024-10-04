@@ -5,13 +5,13 @@ body, html {
 }
 
 body {
-    font-family: 'CustomFont', sans-serif;
+    font-family: 'CustomFont2', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(28, 34, 53);
     color: rgb(255, 255, 255);
-    background-image: url("../Images/Background/Test2.png");
+    /* background-image: url("../Images/Background/Test2.png"); */
   }
   
 .header-container {
@@ -19,11 +19,13 @@ body {
     align-items: center;
     justify-content: center; 
     gap: 50px; 
+    background-image: url("../Images/Background/Test2.png");
 }
 
 .header-container h1 {
     font-family: 'CustomFont2';
-    font-size: 3em;
+    font-weight: lighter;
+    font-size: 2.5em;
     color: rgb(221, 205, 187);
     text-align: center;
 }
@@ -86,14 +88,28 @@ a {
   
   @font-face {
     font-family: 'CustomFont';
-    src: url('../Fonts/MyFont1.ttf') format('truetype');
+    src: url('../Fonts/Classy1.otf') format('opentype');
     font-weight: lighter;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'CustomFont2';
-    src: url('../Fonts/MyFont2.otf') format('opentype');
+    src: url('../Fonts/Classy2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CustomFont3';
+    src: url('../Fonts/ShortWide.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CustomFont4';
+    src: url('../Fonts/ThinLong.otf') format('opentype');
     font-weight: lighter;
     font-style: normal;
   }
