@@ -49,11 +49,18 @@ function createBubbles(data) {
         .append("circle")
         .attr("r", d => rScale(d.purse.$numberInt))
         .style("fill", d => colorScale(d.name))
+        .style("transition", "all 0.3s ease")
         .on("mouseover", function (event, d) {
+            d3.select(this)
+            .style("stroke", "#333") 
+            .style("stroke-width", "2px")
+            .attr("r", rScale(d.purse.$numberInt) * 1.3);
             showTooltip(d);
         })
         .on("mouseout", function () {
-            d3.select(this).style("stroke", null);
+            d3.select(this)
+            .style("stroke-width", null)
+            .attr("r", d => rScale(d.purse.$numberInt))
             hideTooltip();
         });
 
@@ -61,8 +68,6 @@ function createBubbles(data) {
         bubbles.attr("cx", d => d.x)
                .attr("cy", d => d.y);
     });
-
-    
 
     simulation.force("x", forceX).alpha(0.9).restart();
 }
@@ -80,7 +85,10 @@ let tooltip = d3.select("body")
     .style("pointer-events", "none");
 
 function showTooltip(d) {
-    tooltip.html(`<strong>${d.name}</strong><br>Purse: $${d.purse.$numberInt}<br>Winners Share: $${d.winnersShare.$numberInt}`)
+    const purse = d.purse?.$numberInt || 'N/A'; 
+    const winnersShare = d.winnersShare?.$numberInt || 'N/A'; 
+
+    tooltip.html(`<strong>${d.name}</strong><br>Purse: $${purse}<br>Winners Share: $${winnersShare}`)
         .style("visibility", "visible")
         .style("left", `${event.pageX + 10}px`)
         .style("top", `${event.pageY + 10}px`);

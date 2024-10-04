@@ -25,7 +25,7 @@
     display: block;
     cursor: pointer;
     transition: transform 0.3s ease;
-    border-radius: 1px;
+    border-radius: 5px;
 }
 
 
