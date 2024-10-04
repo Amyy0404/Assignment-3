@@ -37,19 +37,21 @@ function initializeChart(data) {
         .style("padding", "10px") 
         .style("border-radius", "5px")
         .style("font-size", "15px") 
+        .style("font-family", "'CustomFont', sans-serif") 
         .style("position", "absolute")  
         .style("pointer-events", "none")  
         .style("z-index", 10);
 
     d3.select("#playerRange")
-        .style("font-size", "16px")
-        .style("font-weight", "normal") 
+        .style("font-size", "18px")
+        .style("font-family", "'CustomFont3', sans-serif") 
+        .style("font-weight", "bolder") 
         .style("margin", "10px")
         .style("width", "150px") 
         .style("height", "30px")  
         .style("background-color", "rgb(247,237,217)") 
         .style("color", "#285f3f")  
-        .style("border-radius", "5px")  
+        .style("border-radius", "3px")  
         .style("padding", "5px"); 
 
     d3.select("#playerRange").on("change", function () {
@@ -128,9 +130,9 @@ function initializeChart(data) {
             .call(d3.axisLeft(y))
             .selectAll("text")
             .style("fill", "rgb(28, 34, 53)")  
-            .style("font-family", "'CustomFont', sans-serif") 
+            .style("font-family", "'CustomFont3', sans-serif") 
             .style("font-size", "17px") 
-            .style("font-weight", "lighter") 
+            .style("font-weight", "bolder") 
             .style("transform", "translateX(70px)")  
             .style("text-transform", "uppercase"); 
     }

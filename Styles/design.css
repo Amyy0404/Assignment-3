@@ -40,6 +40,8 @@ h2{
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 10px;
+  color: rgb(234, 224, 213);
+  font-family: 'CustomFont3', sans-serif;
 }
 
 .bookmark-sidebar {

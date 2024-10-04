@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 65vh;
 }
 
 .image:hover {
@@ -28,6 +28,19 @@
     border-radius: 5px;
 }
 
+.description-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.description-container p {
+    font-size: 18px;
+    color: rgb(221, 205, 187);
+    font-family: 'CustomFont3', sans-serif;
+    padding-left: 290px;
+    padding-right: 290px;
+}
+
 
 .arrow {
     position: absolute;
@@ -37,7 +50,7 @@
     color: #eae7d2;
     cursor: pointer;
     z-index: 10;
-    right: -40px;
+    right: -50px;
 }
 
 .arrow-left {
@@ -53,3 +66,10 @@
     opacity: 0;
     pointer-events: none;
 }
+
+@font-face {
+    font-family: 'CustomFont3';
+    src: url('../Fonts/MyFont3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }

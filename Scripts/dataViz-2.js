@@ -76,12 +76,13 @@ let tooltip = d3.select("body")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute")
+    .style("font-family", "'CustomFont', sans-serif") 
     .style("background-color", "#285f3f")
     .style("padding", "10px")
-    .style("border-radius", "2px")
+    .style("border-radius", "3px")
     .style("visibility", "hidden")
     .style("color", "white")
-    .style("font-size", "14px")
+    .style("font-size", "17px")
     .style("pointer-events", "none");
 
 function showTooltip(d) {

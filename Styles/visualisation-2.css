@@ -16,7 +16,14 @@ h2 {
 
 @font-face {
     font-family: 'CustomFont3';
-    src: url('../Fonts/MyFont3.otf') format('opentype');
+    src: url('../Fonts/ThinLong.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('../Fonts/ShortWide.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
