@@ -31,9 +31,10 @@ body {
 }
 
 .header-icon {
-    width: 200px; 
+    width: 120px; 
     height: auto; 
-    margin-left: -70px;
+    margin-left: -50px;
+    opacity: 0.8;
 }
 
 .golf-club-left:hover {
