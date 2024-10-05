@@ -21,6 +21,7 @@ h2{
 .image-text-row img {
   width: 40%;
   height: auto;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .image-text-row .text-container {
@@ -30,46 +31,44 @@ h2{
 
 .image-text-row .text-container h3 {
   font-family: 'CustomFont3', sans-serif;
-  font-size: 2em;
-  margin: 5px 0;
+  font-size: 1.3em;
+  margin: 2px 0;
   color: rgb(84,155,109);
   transition: color 0.3s ease;
 }
 
 .image-text-row .text-container p {
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
+  margin-top: 3px;
   color: rgb(234, 224, 213);
   font-family: 'CustomFont3', sans-serif;
 }
 
 .bookmark-sidebar {
   font-family: 'CustomFont3', sans-serif;
-  margin-top: 145px;
-  margin-left: 7px;
+  margin-top: 20px;
+  margin-left: 0px;
   position: fixed;
-  top: 40px;
-  left: 0;
-  width: 125px;
+  width: 130px;
   background-color: rgb(48, 93, 63);
-  padding: 10px;
-  z-index: 1000;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 800;
   opacity: 1;
-  background-image: url("../Images/Background/Test2.png")
+  background-image: url("../Images/Background/Test2.png");
+  transition: transform 0.3s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.container-or-parent {
-  min-height: 100vh; 
+.bookmark-sidebar:hover{
+  transform: scale(1.05);
 }
 
 .bookmark-sidebar ul {
   list-style: none;
   padding: 0;
-}
-
-.bookmark-sidebar ul li {
-  margin: 5px 0;
 }
 
 .bookmark-sidebar ul li a {
@@ -78,13 +77,17 @@ h2{
   font-size: 1em;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 5px;
-  display: block;
+  display:flex;
   transition: color 0.3s ease;
 }
 
 .bookmark-sidebar ul li a:hover {
   color: rgb(184, 169, 151);
+}
+
+.image-text-row .text-container .website-link a:hover {
+  color: #229641; 
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
