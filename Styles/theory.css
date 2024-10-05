@@ -7,15 +7,16 @@ h2 {
 
 .video-container {
     position: relative;
-    padding-bottom: 40%; /* Aspect ratio 16:9 */
+    padding-bottom: 40%; 
     height: 0;
     overflow: hidden;
-    max-width: 100%; /* Simulate a black screen */
+    max-width: 100%;
+    margin-bottom: 5px;
 }
 
 .video-container iframe {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 330px;
     width: 60%;
     height: 70%;
@@ -56,6 +57,7 @@ h2 {
     margin-top: 25px;
     font-size: 1.2em;
     font-family: 'CustomFont3', sans-serif;
+    font-weight: bold;
     color: #347336;
     max-width: 1200px;
     margin-left: auto;
@@ -66,6 +68,58 @@ h2 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     text-align: justify;
 }
+
+.par-description {
+    margin-top: 25px;
+    font-size: 1.1em;
+    font-family: 'CustomFont3', sans-serif;
+    font-weight: bold;
+    color: rgb(200, 190, 179);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    text-align: justify;
+}
+
+.article-links { 
+    text-align: center; 
+    margin: 20px 70px; 
+    font-family: 'CustomFont3', sans-serif;
+    background-color: rgb(200, 190, 179); 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.article-links ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.article-links li {
+    margin: 10px; 
+}
+
+.article-links a {
+    color: rgb(200, 190, 179); 
+    color: #28724b;
+    text-decoration: none; 
+    font-size: 1.5em; 
+    transition: color 0.3s, background-color 0.3s; 
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+.article-links a:hover {
+    color: rgb(200, 190, 179); 
+    background-color: #1d5537; 
+    text-decoration: none;
+}
+
 
 @font-face {
     font-family: 'CustomFont4';
@@ -78,6 +132,13 @@ h2 {
 @font-face {
     font-family: 'CustomFont3';
     src: url('../Fonts/ShortWide.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CustomFont5';
+    src: url('../Fonts/new.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }

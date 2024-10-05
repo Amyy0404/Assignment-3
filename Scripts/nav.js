@@ -2,7 +2,8 @@ const navLinks = [
     { text: 'HOME', url:'../index.html' },
     { text: 'DESIGNS', url: '../Design/index.html' },
     { text: 'THEORY', url: '../Theory/index.html' },
-    { text: 'VISUALISATIONS', url: '../Visualisation/Index.html' }
+    { text: 'VISUALISATIONS', url: '../Visualisation/Index.html' },
+    { text: 'MEDIA', url: '../Content/index.html' }
 ];
 
 function createNavigationBar() {
