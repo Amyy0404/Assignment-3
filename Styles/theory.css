@@ -20,6 +20,7 @@ h2 {
     left: 330px;
     width: 60%;
     height: 70%;
+    box-shadow: 0 4px 8px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 .download-section {
@@ -63,10 +64,11 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    background-color: rgb(200, 190, 179);
+    background-color: rgb(212, 205, 197);
     border-radius: 2px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+
     text-align: justify;
+    box-shadow: 0 4px 8px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 .par-description {
@@ -74,7 +76,7 @@ h2 {
     font-size: 1.1em;
     font-family: 'CustomFont3', sans-serif;
     font-weight: bold;
-    color: rgb(200, 190, 179);
+    color: rgb(225, 216, 207);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;

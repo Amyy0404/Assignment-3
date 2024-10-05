@@ -12,6 +12,7 @@ label {
 svg {
     display: block;
     margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0.7, 0.7, 0.7, 0.7);
 }
 
 .bar {
