@@ -41,7 +41,7 @@ function initializeChart(data) {
      .select("body").append("div")
      .attr("class", "tooltip")
      // Apply tooltip styles for better visibility and user interaction
-     .style("background-color", "#285f3f")  
+     .style("background-color", "#574237")  
      .style("color", "rgb(255, 255, 255)") 
      .style("padding", "10px") 
      .style("border-radius", "5px")
@@ -97,7 +97,7 @@ function initializeChart(data) {
          .attr("y", (d, i) => y(d.fullName) + (padding / 2))
          .attr("width", d => x(+d.avgPoints.$numberDouble))
          .attr("height", barHeight)
-         .style("fill", "#2c8053")  
+         .style("fill", "#93695d")  
          .style("transform", "translateX(100px)")
          // Change the bar color on hover for better user interaction
          .on("mouseover", function (event, d) {
@@ -119,7 +119,7 @@ function initializeChart(data) {
                  .style("top", (event.pageY - 28) + "px");
          })
          .on("mouseout", function () {
-             d3.select(this).style("fill", "#2c8053"); 
+             d3.select(this).style("fill", "#93695d"); 
              tooltip.style("opacity", 0);
          });
 
