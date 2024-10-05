@@ -42,6 +42,23 @@
  <!-- Placeholder for the data visualization chart -->
  <svg id="chart" width="700" height="600"></svg>
 
+ <div id="description-container" class="description-container">
+  <p id="description">In this data visualization, I utilized D3.js to present the top golf player rankings for 2024, focusing on their 
+    average points, total points, and event participation. The visualization is designed as an interactive bar chart, pulling data from 
+    RapidAPI, which provides live updates on golf stats for the current year. By using D3, the chart displays each player's ranking and 
+    performance metrics, with the flexibility to show varying numbers of players based on user selection.
+<br><br>
+    The bar chart effectively communicates each player's average points, visually emphasizing the leading players by adjusting bar lengths 
+    proportional to their performance. This method is especially effective because it allows users to quickly grasp relative player rankings 
+    while offering additional depth through interactive tooltips. When hovering over a bar, detailed information about each player, such as 
+    their rank, average points, total points gained, and number of events played, appears in a styled tooltip.
+<br><br>
+    The inclusion of user interaction—changing the number of displayed players and dynamically updating the chart—enhances the effectiveness 
+    of this visualization. It allows users to explore the data at their preferred level of detail. The choice of bar colors, hover effects, 
+    and tooltip styles also ensures that the chart remains visually appealing and consistent with the overall golf theme of the website.
+  </p>
+</div>
+
  <!-- Importing D3.js library for data visualization -->
  <script src="https://d3js.org/d3.v7.min.js"></script>
  <script src="../Scripts/dataViz-1.js"></script>
