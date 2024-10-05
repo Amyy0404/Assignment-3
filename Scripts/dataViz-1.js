@@ -82,7 +82,7 @@ function initializeChart(data) {
             .attr("y", (d, i) => y(d.fullName) + (padding / 2))
             .attr("width", d => x(+d.avgPoints.$numberDouble))
             .attr("height", barHeight)
-            .style("fill", "rgb(28, 34, 53)")  
+            .style("fill", "#2c8053")  
             .style("transform", "translateX(100px)")
             .on("mouseover", function (event, d) {
                 d3.select(this).style("fill", "rgb(174, 159, 142)"); 
@@ -103,7 +103,7 @@ function initializeChart(data) {
                     .style("top", (event.pageY - 28) + "px");
             })
             .on("mouseout", function () {
-                d3.select(this).style("fill", "rgb(28, 34, 53)"); 
+                d3.select(this).style("fill", "#2c8053"); 
                 tooltip.style("opacity", 0);
             });
 
