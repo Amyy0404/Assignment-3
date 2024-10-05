@@ -1,63 +1,52 @@
-/* Mobile-first styling */
 @media (max-width: 768px) {
-
-    /* Make header text smaller */
     .header-container h1 {
         font-size: 1.8em;
     }
 
-    /* Intro paragraph styling for mobile */
     .intro-paragraph {
-        font-size: 1em; /* Smaller font size for intro paragraph */
-        line-height: 1.2; /* Adjust line height */
-        padding: 5px; /* Reduce padding */
-        max-width: 90%; /* Ensure better fit on smaller screens */
-        border-left-width: 4px; /* Narrower border on smaller devices */
-        margin: 0 auto; /* Center paragraph */
+        font-size: 1em; 
+        line-height: 1.2; 
+        padding: 5px; 
+        max-width: 90%; 
+        border-left-width: 4px; 
+        margin: 0 auto; 
     }
 
-    /* Styling for the description paragraph */
     .description-container p {
-        font-size: 1em; /* Smaller font size for intro paragraph */
-        padding: 0 10px; /* Reduce padding */
-        max-width: 90%; /* Ensure better fit on smaller screens */
-        margin: 0 auto; /* Center paragraph */
+        font-size: 1em;
+        padding: 0 10px; 
+        max-width: 90%; 
+        margin: 0 auto;
     }
 
-    /* Stack buttons vertically on mobile */
     .button-container {
-        flex-direction: column; /* Stack images on top of each other */
-        align-items: center; /* Center images on mobile */
-        gap: 30px; /* Reduce the gap between buttons */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px;
     }
 
-    /* Make buttons smaller */
     .button img {
-        width: 100%; /* Make images take up the full width */
-        max-width: 280px; /* Limit the size of the images */
-        height: auto; /* Ensure aspect ratio is maintained */
+        width: 100%; 
+        max-width: 280px;
+        height: auto;
     }
 
-    /* Make button text smaller */
     .button-text {
-        font-size: 1.5em; /* Adjust button text size for mobile */
+        font-size: 1.5em; 
     }
 
-    /* Adjust margins and padding */
     .main-content {
-        padding: 15px; /* Increase padding for smaller screens */
+        padding: 15px; 
     }
 
-    /* Bookmark sidebar styling */
     .bookmark-sidebar {
-        display: none; /* Hide by default on small screens */
+        display: none; 
     }
     
     .bookmark-sidebar.show-sidebar {
-        display: block; /* Show sidebar when visible */
+        display: block; 
     }
 
-    /* Image-text row styling */
     .image-text-row {
         flex-direction: column;
         align-items: flex-start;
@@ -69,50 +58,43 @@
         padding-left: 0;
     }
 
-    /* Adjust arrow position */
     .arrow {
         font-size: 24px;
-        right: -30px; /* Position arrow for mobile view */
+        right: -30px; 
     }
 }
 
-/* For even smaller screens */
 @media (max-width: 480px) {
     .header-container h1 {
-        font-size: 1.5em; /* Further reduce header font size */
+        font-size: 1.5em; 
     }
 
     .intro-paragraph {
-        font-size: 0.9em; /* Further reduce intro paragraph text size */
-        padding: 5px; /* Smaller padding */
-        line-height: 1.3; /* Adjust line height */
+        font-size: 0.9em;
+        padding: 5px; 
+        line-height: 1.3; 
     }
 
-    /* Stack images more comfortably */
     .button-container {
-        gap: 20px; /* Reduce gap even more */
+        gap: 20px; 
     }
 
-    /* Further image reduction for small devices */
     .button img {
-        max-width: 200px; /* Set a smaller max width for very small screens */
+        max-width: 200px;
     }
 
-    /* Adjust button text */
     .button-text {
-        font-size: 1.2em; /* Make button text even smaller */
+        font-size: 1.2em; 
     }
 }
 
-/* Larger screen styling */
 @media (min-width: 769px) {
     .bookmark-sidebar {
-        display: block; /* Show sidebar by default */
+        display: block;
         width: 125px;
     }
 }
 
-/* Navigation styling */
 @media (max-width: 760px) {
     nav ul {
         flex-direction: column;

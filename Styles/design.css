@@ -21,7 +21,7 @@ h2{
 .image-text-row img {
   width: 40%;
   height: auto;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0.3, 0.2);
 }
 
 .image-text-row .text-container {
@@ -31,10 +31,11 @@ h2{
 
 .image-text-row .text-container h3 {
   font-family: 'CustomFont3', sans-serif;
-  font-size: 1.3em;
+  font-size: 2em;
   margin: 2px 0;
   color: rgb(84,155,109);
   transition: color 0.3s ease;
+  padding-bottom: 20px;
 }
 
 .image-text-row .text-container p {
@@ -44,6 +45,7 @@ h2{
   margin-top: 3px;
   color: rgb(234, 224, 213);
   font-family: 'CustomFont3', sans-serif;
+  text-align: justify;
 }
 
 .bookmark-sidebar {
@@ -59,7 +61,7 @@ h2{
   opacity: 1;
   background-image: url("../Images/Background/Test2.png");
   transition: transform 0.3s ease;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0.2, 0.2);
 }
 
 .bookmark-sidebar:hover{

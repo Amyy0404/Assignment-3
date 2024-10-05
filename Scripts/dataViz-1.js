@@ -98,7 +98,7 @@ function initializeChart(data) {
                     ? Math.round(d.pointsGained.$numberDouble) : 0;
 
                 tooltip.style("opacity", 1)
-                    .html(`Name: ${d.fullName}<br>Rank: ${rank}<br>Avergae Points: ${avgPoints}<br>Events: ${events}<br>Points Gained: ${pointsGained}`)
+                    .html(`Name: ${d.fullName}<br>Rank: ${rank}<br>Average Points: ${avgPoints}<br>Events: ${events}<br>Points Gained: ${pointsGained}`)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
