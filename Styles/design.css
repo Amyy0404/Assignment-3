@@ -32,27 +32,27 @@ h2{
 .image-text-row .text-container h3 {
   font-family: 'CustomFont3', sans-serif;
   font-size: 2em;
-  margin: 2px 0;
+  margin: 2px 0;/* Minimal vertical spacing for compactness */
   color: rgb(84,155,109);
   transition: color 0.3s ease;
   padding-bottom: 20px;
 }
 
 .image-text-row .text-container p {
-  font-size: 1.3em;
+  font-size: 1.3em;/* Ensure text is legible without overwhelming */
   line-height: 1.6;
   margin-bottom: 3px;
   margin-top: 3px;
   color: rgb(234, 224, 213);
   font-family: 'CustomFont3', sans-serif;
-  text-align: justify;
+  text-align: justify;/* Align text for a professional look */
 }
 
 .bookmark-sidebar {
   font-family: 'CustomFont3', sans-serif;
   margin-top: 20px;
   margin-left: 0px;
-  position: fixed;
+  position: fixed; /* Keep the sidebar visible during scrolling */
   width: 130px;
   background-color: rgb(48, 93, 63);
   padding: 5px;
@@ -69,7 +69,7 @@ h2{
 }
 
 .bookmark-sidebar ul {
-  list-style: none;
+  list-style: none; /* Remove default bullet points for a cleaner look */
   padding: 0;
 }
 
@@ -88,7 +88,7 @@ h2{
 }
 
 .image-text-row .text-container .website-link a:hover {
-  color: #229641; 
+  color: #229641;  /* Highlight links in the text container for emphasis */
   text-decoration: underline;
 }
 

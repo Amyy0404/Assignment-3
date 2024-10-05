@@ -1,19 +1,18 @@
-/* Horizontal lines */
 hr {
     border: 0;
     height: 2px;
     background: rgb(227,212,196);
-    margin: 30px 0; 
+    margin: 30px 0; /* Create space above and below for separation */
     width: 100%; 
     opacity: 0.7; 
 }
 
 .section-line {
     border: 0;
-    height: 3px;
+    height: 3px;/* Slightly thicker for added emphasis */
     background: rgb(227,212,196);
     margin: 50px 0;
-    width: 100%;
+    width: 100%;/* Full width for consistent layout */
     opacity: 0.8;
 }
 

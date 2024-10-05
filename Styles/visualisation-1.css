@@ -10,13 +10,13 @@ label {
 }
 
 svg {
-    display: block;
+    display: block;/* Center SVG elements by setting them as block elements. */
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0.7, 0.7, 0.7, 0.7);
 }
 
 .bar {
-    transition: fill 0.3s;
+    transition: fill 0.3s;/* Smoothly change fill color for interactive visual feedback. */
 }
 
 .y-axis line, 
@@ -35,7 +35,7 @@ svg {
 
 .legend {
     color: rgb(28, 34, 53);
-    font-size: 14px;
+    font-size: 14px;/* Set a size that makes the legend easy to read without overpowering other elements. */
 }
 
   @font-face {

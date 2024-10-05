@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageDisplay = document.getElementById('image-display');
     const arrow = document.getElementById('arrow');
     const description = document.getElementById('description');
-    let currentImage = 1;
-    
+    let currentImage = 1;// Track the index of the currently displayed image
+
+    // Store image data, links, and descriptions for easy access
     const images = [
         { 
             src: '../Images/Posters/Data-Viz-1.png', 
@@ -18,20 +19,24 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     function handleImageClick() {
+        // Navigate to the link of the currently displayed image when clicked
         window.location.href = images[currentImage - 1].link;
     }
 
     imageDisplay.addEventListener('click', handleImageClick);
 
+    // Handle arrow click to switch images and description with a transition
     arrow.addEventListener('click', function() {
         imageDisplay.classList.add('hidden');
 
         setTimeout(function() {
+            // Toggle current image index to switch between the two available images
             currentImage = (currentImage === 1) ? 2 : 1;
+
             imageDisplay.src = images[currentImage - 1].src;
-            description.textContent = images[currentImage - 1].description; // Update the paragraph
+            description.textContent = images[currentImage - 1].description; 
 
             imageDisplay.classList.remove('hidden');
-        }, 600);
+        }, 600);// Wait for transition effect before changing the content
     });
 });

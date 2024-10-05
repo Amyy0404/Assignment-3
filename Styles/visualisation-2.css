@@ -6,7 +6,7 @@ h2 {
 }
 
 #bubble-chart {
-    text-align: center;
+    text-align: center;/* Center the chart to align with overall layout and improve presentation */
 }
 
 #controls {

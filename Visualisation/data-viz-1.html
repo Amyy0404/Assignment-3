@@ -32,15 +32,17 @@
 
  <h2 style="color: #4ea874; font-weight: lighter;">TOP GOLF PLAYERS OF 2024</h2> 
  <label for="playerRange" style="font-family: 'CustomFont3'; padding-left: 5px;">PLAYER RANKINGS:</label>
+ <!-- Dropdown to filter amount of players shown -->
  <select id="playerRange">
      <option value="10">TOP 10</option>
      <option value="20">TOP 20</option>
      <option value="30">TOP 30</option>
  </select>
  
+ <!-- Placeholder for the data visualization chart -->
  <svg id="chart" width="700" height="600"></svg>
 
-
+ <!-- Importing D3.js library for data visualization -->
  <script src="https://d3js.org/d3.v7.min.js"></script>
  <script src="../Scripts/dataViz-1.js"></script>
 

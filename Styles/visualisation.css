@@ -7,7 +7,7 @@
 }
 
 .image:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly enlarge image on hover to enhance interactivity */   
 }
 
 .button-image-container {
@@ -15,15 +15,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    height: 280px;
+    width: 280px;/* Fixed size for uniformity */
+    height: 280px;/* Fixed size for uniformity */   
 }
 
 .image {
-    width: 100%;
-    height: auto;
+    width: 100%;/* Responsive width to fill the container */
+    height: auto; /* Maintain aspect ratio */
     display: block;
-    cursor: pointer;
+    cursor: pointer; /* Indicate clickable image */
     transition: transform 0.3s ease;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0.6, 0.6, 0.6, 0.6);
@@ -47,9 +47,9 @@
     top: 50%;
     transition: transform 0.3s ease;
     cursor: pointer;
-    z-index: 10;
+    z-index: 10;/* Ensure arrows are above other elements */
     right: -50px;
-    opacity: 0.85;
+    opacity: 0.85;/* Slightly transparent for a subtle effect */
 }
 
 .arrow-left {
@@ -64,7 +64,7 @@
 
 .hidden {
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none;/* Disable interaction with hidden elements */
 }
 
 @font-face {

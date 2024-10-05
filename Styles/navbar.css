@@ -1,41 +1,43 @@
+/* Style the navigation bar with a soft background and padding for better spacing */
 nav {
-    background-color: rgb(247,237,217);
-    padding: 10px 0;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: rgb(84,155,109);
-    font-size: 1.5em;
-    padding: 10px;
-    font-family: 'CustomFont3';
-    transition: background-color 0.3s ease;
-  }
+  background-color: rgb(247, 237, 217); 
+  padding: 10px 0;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
 
-  @font-face {
-    font-family: 'CustomFont4';
-    font-weight: bolder;
-    src: url('../Fonts/ThinLong.otf') format('opentype');
-    font-weight: lighter;
-    font-style: normal;
-  }
+/* Create a horizontal list for the navigation items to enhance accessibility and ease of navigation */
+nav ul {
+  display: flex;
+  justify-content: center; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  @font-face {
-    font-family: 'CustomFont3';
-    src: url('../Fonts/ShortWide.ttf') format('truetype');
-    font-weight: lighter;
-    font-style: normal;
-  }
+nav ul li {
+  margin: 0 15px; 
+}
 
+nav ul li a {
+  color: rgb(84, 155, 109);
+  font-size: 1.5em; 
+  padding: 10px; 
+  font-family: 'CustomFont3'; 
+  transition: background-color 0.3s ease;
+}
+
+/* Creating a custom font to be used across the site for a unique look */
+@font-face {
+  font-family: 'CustomFont4'; 
+  font-weight: bolder;
+  src: url('../Fonts/ThinLong.otf') format('opentype'); 
+  font-weight: lighter; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont3';
+  src: url('../Fonts/ShortWide.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
