@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Assignment 3: Commercial Website">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Amy Janse van Vuuren">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../Styles/global.css">
+  <link rel="stylesheet" href="../Styles/navbar.css">
+  <link rel="stylesheet" href="../Styles/footer.css">
+  <link rel="stylesheet" href="../Styles/responsive.css">
+  <link rel="stylesheet" href="../Styles/visualisation-2.css">
+  <link rel="stylesheet" href="../Styles/scrollbar.css">
+
+  <script src="../Scripts/nav.js" defer></script>
+  <script src="./Scripts/key-scroll.js" defer></script>
+
+  <title>Visualisation Page</title>
+
+</head>
+<body>
+ <header>
+     <hr>
+     <div class="header-container">
+         <h1>VISUALISATIONS</h1>
+     </div>
+     <hr>
+     <nav></nav>
+ </header>
+
+ <h2 style="color: #4ea874; font-weight: lighter;">Heatmap of 2024 Tournaments</h2>
+
+ <!-- Placeholder for the D3 bubble chart; allows for dynamic data visualization -->
+ <svg id="radial-chart" width="800" height="800"></svg>
+
+ 
+ <div id="description-container" class="description-container">
+  <p id="description">
+  </p>
+</div>
+
+ <!-- Importing D3.js library for data visualization -->
+ <script src="https://d3js.org/d3.v7.min.js"></script>
+ <script src="../Scripts/dataViz-3.js"></script>
+
+  <footer>
+    <span class="p-name">Amy Janse van Vuuren -</span>
+    <a class="u-email" href="mailto:fake@gmail.com"> fake@gmail.com -</a>
+    <span class="p-org"> University of the Witwatersrand -</span>
+    <span class="p-locality"> Johannesburg -</span>
+    <span class="p-country-name"> South Africa </span>
+  </footer>
+
+</body>
+</html>
