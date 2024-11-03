@@ -198,7 +198,6 @@ let tooltip = d3.select("body")
     .style("visibility", "hidden")
     .style("box-shadow", "0px 4px 8px rgba(0, 0, 0, 0.2)");
 
-
     function showTooltip(event, d) {
         const points = d.fedexCupPoints?.$numberInt ? parseInt(d.fedexCupPoints.$numberInt) : 'N/A';
         tooltip.html(`<strong>${d.name}</strong><br>Winner's Share: $${d.winnersShare || 'N/A'}<br>FedEx Cup Points: ${points}`)
