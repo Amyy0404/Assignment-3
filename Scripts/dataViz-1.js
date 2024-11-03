@@ -3,7 +3,7 @@ const options = {
     method: 'GET',
     // Set up the options for the fetch call, including authorization headers
     headers: {
-     'x-rapidapi-key': '12678f2e2fmshef95f02faa67002p1b1685jsnecbc1d154998',
+     'x-rapidapi-key': '5723e04825msh816004be5752d8fp19fa84jsnbe9795b17e33',
      'x-rapidapi-host': 'live-golf-data.p.rapidapi.com'
     }
 };

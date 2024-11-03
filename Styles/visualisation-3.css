@@ -1,0 +1,80 @@
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4ea874;
+    font-weight: lighter;
+    font-family: 'CustomFont4', sans-serif;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 8px;
+    background: #2c8053; 
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(221, 205, 187); 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: rgb(238, 235, 231); 
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #1d5436;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fedex-checkbox-label {
+    font-size: 18px;
+    font-family: 'CustomFont3';
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+input[type="checkbox"].fedex-checkbox {
+    accent-color: rgb(221, 209, 196); 
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+input[type="checkbox"].fedex-checkbox:hover {
+    accent-color: rgb(239, 233, 226);
+    width: 18px;
+    height: 18px;  
+}
+
+@font-face {
+    font-family: 'CustomFont4';
+    font-weight: bolder;
+    src: url('../Fonts/ThinLong.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CustomFont3';
+    src: url('../Fonts/ShortWide.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+  }

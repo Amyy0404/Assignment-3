@@ -3,12 +3,24 @@ const url = 'https://live-golf-data.p.rapidapi.com/schedule?orgId=1&year=2024';
 const options = {
     method: 'GET',
     headers: {
-        'x-rapidapi-key': '12678f2e2fmshef95f02faa67002p1b1685jsnecbc1d154998',
+        'x-rapidapi-key': '5723e04825msh816004be5752d8fp19fa84jsnbe9795b17e33',
         'x-rapidapi-host': 'live-golf-data.p.rapidapi.com'
     }
 };
 
 let processedData = [];
+
+// Initialize an array to hold the selected FedEx Cup points ranges
+let selectedFedexPoints = ["100-300"]; // Default selection
+
+// Function to update the selection based on checkboxes
+function updateSelectedFedexPoints() {
+    selectedFedexPoints = Array.from(document.querySelectorAll('.fedex-checkbox:checked')).map(checkbox => checkbox.value);
+    updateRadialChart();
+}
+
+// Attach event listeners to checkboxes
+d3.selectAll('.fedex-checkbox').on('change', updateSelectedFedexPoints);
 
 fetch(url, options)
     .then(response => response.json())
@@ -18,10 +30,13 @@ fetch(url, options)
             winnersShare: d.winnersShare?.$numberInt ? parseInt(d.winnersShare.$numberInt) : null
         }));
         updateRadialChart();
+
+        document.querySelectorAll('.fedex-checkbox').forEach(checkbox => checkbox.checked = true);
+        updateSelectedFedexPoints(); // Call to update visualization with default selection
     })
     .catch(error => console.error('Error:', error));
 
-let WIDTH = 1500, HEIGHT = 800;
+let WIDTH = 1500, HEIGHT = 700;
 let svg = d3.select("#radial-chart")
     .append("svg")
     .attr("width", WIDTH)
@@ -48,7 +63,7 @@ const slider = d3.select("body")
     .attr("max", layers.length) 
     .attr("value", 1)
     .style("position", "absolute")
-    .style("top", "300px") 
+    .style("top", "400px") 
     .style("left", "10%")
     .style("transform", "translateX(-50%)")
     .on("input", function () {
@@ -90,46 +105,56 @@ function updateRadialChart() {
             .duration(800);
     });
 
-    processedData.forEach((d, i) => {
-        const layer = layers.find(layer => d.winnersShare >= layer.min && d.winnersShare <= layer.max);
-        if (!layer) return;
+    // Filter processedData based on selected FedEx points
+    const filteredData = processedData.filter(d => {
+    const points = d.fedexCupPoints?.$numberInt ? parseInt(d.fedexCupPoints.$numberInt) : null;
+    if (selectedFedexPoints.includes("100-300") && points >= 100 && points <= 300) return true;
+    if (selectedFedexPoints.includes("400-600") && points >= 400 && points <= 600) return true;
+    if (selectedFedexPoints.includes("700+") && points >= 700) return true;
+    return false;
+});
 
-        let targetLayerIndex = (expansionFactor >= layers.length) ? 0 : layers.indexOf(layer);
-        if (expansionFactor >= layers.length) {
-            targetLayerIndex = layers.findIndex(l => l.min === 4000000);
-        }
+// Process filteredData instead of processedData
+filteredData.forEach((d, i) => {
+    const layer = layers.find(layer => d.winnersShare >= layer.min && d.winnersShare <= layer.max);
+    if (!layer) return;
 
-        let initialRadius = layers[targetLayerIndex].baseRadius + (expansionFactor - 1) * 20 * targetLayerIndex;
-        const angle = i * (2 * Math.PI) / processedData.length + 2;
-        const x = centerX + Math.cos(angle) * initialRadius;
-        const y = centerY + Math.sin(angle) * initialRadius;
+    let targetLayerIndex = (expansionFactor >= layers.length) ? 0 : layers.indexOf(layer);
+    if (expansionFactor >= layers.length) {
+        targetLayerIndex = layers.findIndex(l => l.min === 4000000);
+    }
 
-        const dotSize = d.winnersShare ? Math.max(6, d.winnersShare / 200000) : 5;
+    let initialRadius = layers[targetLayerIndex].baseRadius + (expansionFactor - 1) * 20 * targetLayerIndex;
+    const angle = i * (2 * Math.PI) / filteredData.length + 2;
+    const x = centerX + Math.cos(angle) * initialRadius;
+    const y = centerY + Math.sin(angle) * initialRadius;
 
-        svg.append("circle")
-            .attr("class", "data-point")
-            .attr("cx", x)
-            .attr("cy", y)
-            .attr("r", dotSize)
-            .style("fill", getColor(d.winnersShare))
-            .style("cursor", "pointer")
-            .on("mouseover", function (event) {
-                d3.select(this)
-                    .transition()
-                    .duration(200)
-                    .attr("r", dotSize + 6) 
-                    .style("fill", darkenColor(getColor(d.winnersShare), 0.2))
-                showTooltip(event, d);
-            })
-            .on("mouseout", function () {
-                d3.select(this)
-                    .transition()
-                    .duration(200)
-                    .attr("r", dotSize) 
-                    .style("fill", getColor(d.winnersShare)); 
-                hideTooltip();
-            });
-    });
+    const dotSize = d.winnersShare ? Math.max(6, d.winnersShare / 200000) : 5;
+
+    svg.append("circle")
+        .attr("class", "data-point")
+        .attr("cx", x)
+        .attr("cy", y)
+        .attr("r", dotSize)
+        .style("fill", getColor(d.winnersShare))
+        .style("cursor", "pointer")
+        .on("mouseover", function (event) {
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("r", dotSize + 6)
+                .style("fill", darkenColor(getColor(d.winnersShare), 0.2))
+            showTooltip(event, d);
+        })
+        .on("mouseout", function () {
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("r", dotSize)
+                .style("fill", getColor(d.winnersShare));
+            hideTooltip();
+        });
+});
 
     if (expansionFactor >= layers.length) {
         const targetRadius = layers.find(layer => layer.min === 4000000)?.baseRadius || 0;
@@ -164,18 +189,24 @@ let tooltip = d3.select("body")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute")
-    .style("background-color", "#333")
-    .style("color", "white")
-    .style("padding", "8px")
-    .style("border-radius", "4px")
-    .style("visibility", "hidden");
+    .style("background-color", "#285f3f") 
+    .style("color", "white")          
+    .style("font-family", "'CustomFont3', sans-serif")
+    .style("font-size", "15px") 
+    .style("padding", "10px")
+    .style("border-radius", "2px")
+    .style("visibility", "hidden")
+    .style("box-shadow", "0px 4px 8px rgba(0, 0, 0, 0.2)");
 
-function showTooltip(event, d) {
-    tooltip.html(`<strong>${d.name}</strong><br>Winner's Share: $${d.winnersShare || 'N/A'}`)
-        .style("visibility", "visible")
-        .style("left", `${event.pageX + 10}px`)
-        .style("top", `${event.pageY + 10}px`);
-}
+
+    function showTooltip(event, d) {
+        const points = d.fedexCupPoints?.$numberInt ? parseInt(d.fedexCupPoints.$numberInt) : 'N/A';
+        tooltip.html(`<strong>${d.name}</strong><br>Winner's Share: $${d.winnersShare || 'N/A'}<br>FedEx Cup Points: ${points}`)
+            .style("visibility", "visible")
+            .style("left", `${event.pageX + 10}px`)
+            .style("top", `${event.pageY + 10}px`);
+    }
+    
 
 function hideTooltip() {
     tooltip.style("visibility", "hidden");

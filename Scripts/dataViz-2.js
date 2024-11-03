@@ -4,7 +4,7 @@ const url = 'https://live-golf-data.p.rapidapi.com/schedule?orgId=1&year=2024';
 const options = {
 	method: 'GET',
 	headers: {
-	 'x-rapidapi-key': '12678f2e2fmshef95f02faa67002p1b1685jsnecbc1d154998',
+	 'x-rapidapi-key': '5723e04825msh816004be5752d8fp19fa84jsnbe9795b17e33',
 	 'x-rapidapi-host': 'live-golf-data.p.rapidapi.com'
 	}
 };
