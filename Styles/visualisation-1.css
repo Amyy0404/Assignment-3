@@ -57,6 +57,23 @@ svg {
     text-align: justify;
 }
 
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 34, 53);
+    z-index: 1000; /* Ensure it is on top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'CustomFont3', sans-serif; /* Match your font */
+    font-size: 18px;
+    color: #4ea874; /* Match your color */
+    background-image: url("../Images/Background/Test2.png");
+}
+
   @font-face {
     font-family: 'CustomFont4';
     font-weight: bolder;

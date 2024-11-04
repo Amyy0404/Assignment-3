@@ -2,23 +2,44 @@ const url = 'https://live-golf-data.p.rapidapi.com/schedule?orgId=1&year=2024';
 
 // Configure options for the API request, including necessary headers for authentication
 const options = {
-	method: 'GET',
-	headers: {
-	 'x-rapidapi-key': '5723e04825msh816004be5752d8fp19fa84jsnbe9795b17e33',
-	 'x-rapidapi-host': 'live-golf-data.p.rapidapi.com'
-	}
+    method: 'GET',
+    headers: {
+        'x-rapidapi-key': '5723e04825msh816004be5752d8fp19fa84jsnbe9795b17e33',
+        'x-rapidapi-host': 'live-golf-data.p.rapidapi.com'
+    }
 };
+
+// Function to show the loading screen
+function showLoadingScreen() {
+    document.getElementById('loading-screen').style.display = 'flex';
+}
+
+// Function to hide the loading screen
+function hideLoadingScreen() {
+    document.getElementById('loading-screen').style.display = 'none';
+}
+
+// Show the loading screen before fetching data
+showLoadingScreen();
 
 // Fetch the data from the API
 fetch(url, options)
- .then(response => response.json())
- .then(data => {
-     // Create bubbles for the bubble chart using the fetched schedule data
-     createBubbles(data.schedule);
+    .then(response => response.json())
+    .then(data => {
+        // Hide the loading screen after data is fetched
+        hideLoadingScreen();
 
-     //console.log(data); 
- })
- .catch(error => console.error('Error:', error));
+        // Create bubbles for the bubble chart using the fetched schedule data
+        createBubbles(data.schedule);
+
+        // console.log(data); 
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Hide loading screen if there's an error as well
+        hideLoadingScreen();
+    });
+
 
 // Set dimensions for the SVG container of the bubble chart
 let HEIGHT = 1000,

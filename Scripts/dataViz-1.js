@@ -8,14 +8,32 @@ const options = {
     }
 };
 
+function showLoadingScreen() {
+    document.getElementById('loading-screen').style.display = 'flex';
+}
+
+// Function to hide the loading screen
+function hideLoadingScreen() {
+    document.getElementById('loading-screen').style.display = 'none';
+}
+
+// Show the loading screen before fetching data
+showLoadingScreen();
+
 fetch(url, options)
     .then(response => response.json())
     .then(data => {
-     const rankings = data.rankings;
-      // Extract rankings from the fetched data to initialize the chart
-     initializeChart(rankings);
+        const rankings = data.rankings;
+        // Extract rankings from the fetched data to initialize the chart
+        initializeChart(rankings);
     })
-    .catch(error => console.error('Error fetching data:', error));
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    })
+    .finally(() => {
+        // Hide the loading screen after data is fetched (or on error)
+        hideLoadingScreen();
+    });
 
 function initializeChart(data) {
     // Set up the chart area with background and border styling for better visibility

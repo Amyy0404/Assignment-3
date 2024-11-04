@@ -22,6 +22,9 @@ function updateSelectedFedexPoints() {
 // Attach event listeners to checkboxes
 d3.selectAll('.fedex-checkbox').on('change', updateSelectedFedexPoints);
 
+// Show the loading screen
+document.getElementById('loading-screen').style.display = 'flex';
+
 fetch(url, options)
     .then(response => response.json())
     .then(data => {
@@ -29,12 +32,21 @@ fetch(url, options)
             ...d,
             winnersShare: d.winnersShare?.$numberInt ? parseInt(d.winnersShare.$numberInt) : null
         }));
+        
+        // Update the radial chart
         updateRadialChart();
+
+        // Hide the loading screen
+        document.getElementById('loading-screen').style.display = 'none';
 
         document.querySelectorAll('.fedex-checkbox').forEach(checkbox => checkbox.checked = true);
         updateSelectedFedexPoints(); // Call to update visualization with default selection
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        // Hide the loading screen in case of error
+        document.getElementById('loading-screen').style.display = 'none';
+    });
 
 let WIDTH = 1500, HEIGHT = 700;
 let svg = d3.select("#radial-chart")
