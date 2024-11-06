@@ -10,19 +10,15 @@ const options = {
 
 let processedData = [];
 
-// Initialize an array to hold the selected FedEx Cup points ranges
-let selectedFedexPoints = ["100-300"]; // Default selection
+let selectedFedexPoints = ["100-300"]; 
 
-// Function to update the selection based on checkboxes
 function updateSelectedFedexPoints() {
     selectedFedexPoints = Array.from(document.querySelectorAll('.fedex-checkbox:checked')).map(checkbox => checkbox.value);
     updateRadialChart();
 }
 
-// Attach event listeners to checkboxes
 d3.selectAll('.fedex-checkbox').on('change', updateSelectedFedexPoints);
 
-// Show the loading screen
 document.getElementById('loading-screen').style.display = 'flex';
 
 fetch(url, options)
@@ -33,18 +29,15 @@ fetch(url, options)
             winnersShare: d.winnersShare?.$numberInt ? parseInt(d.winnersShare.$numberInt) : null
         }));
         
-        // Update the radial chart
         updateRadialChart();
 
-        // Hide the loading screen
         document.getElementById('loading-screen').style.display = 'none';
 
         document.querySelectorAll('.fedex-checkbox').forEach(checkbox => checkbox.checked = true);
-        updateSelectedFedexPoints(); // Call to update visualization with default selection
+        updateSelectedFedexPoints(); 
     })
     .catch(error => {
         console.error('Error:', error);
-        // Hide the loading screen in case of error
         document.getElementById('loading-screen').style.display = 'none';
     });
 
@@ -117,7 +110,6 @@ function updateRadialChart() {
             .duration(800);
     });
 
-    // Filter processedData based on selected FedEx points
     const filteredData = processedData.filter(d => {
     const points = d.fedexCupPoints?.$numberInt ? parseInt(d.fedexCupPoints.$numberInt) : null;
     if (selectedFedexPoints.includes("100-300") && points >= 100 && points <= 300) return true;
@@ -126,7 +118,6 @@ function updateRadialChart() {
     return false;
 });
 
-// Process filteredData instead of processedData
 filteredData.forEach((d, i) => {
     const layer = layers.find(layer => d.winnersShare >= layer.min && d.winnersShare <= layer.max);
     if (!layer) return;

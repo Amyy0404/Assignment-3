@@ -1,7 +1,6 @@
 const url = 'https://live-golf-data.p.rapidapi.com/stats?year=2024&statId=186';
 const options = {
     method: 'GET',
-    // Set up the options for the fetch call, including authorization headers
     headers: {
      'x-rapidapi-key': '5723e04825msh816004be5752d8fp19fa84jsnbe9795b17e33',
      'x-rapidapi-host': 'live-golf-data.p.rapidapi.com'
@@ -24,19 +23,18 @@ fetch(url, options)
     .then(response => response.json())
     .then(data => {
         const rankings = data.rankings;
-        // Extract rankings from the fetched data to initialize the chart
+
         initializeChart(rankings);
     })
     .catch(error => {
         console.error('Error fetching data:', error);
     })
     .finally(() => {
-        // Hide the loading screen after data is fetched (or on error)
+        // Hide the loading screen after data is fetched 
         hideLoadingScreen();
     });
 
 function initializeChart(data) {
-    // Set up the chart area with background and border styling for better visibility
     let svg = d3
      .select("#chart")
      .style("background-color", "rgb(247,237,217)")  
