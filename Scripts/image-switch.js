@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageDisplay = document.getElementById('image-display');
     const arrow = document.getElementById('arrow');
     const description = document.getElementById('description');
-    let currentImage = 1;// Track the index of the currently displayed image
+    let currentImage = 0; // Start with the first image
 
     // Store image data, links, and descriptions for easy access
     const images = [
@@ -15,12 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
             src: '../Images/Posters/Data-Viz-2.png', 
             link: '../Visualisation/data-viz-2.html',
             description: "If you're a golfer (or even just a golf enthusiast), knowing the prize money for each tournament in 2024 isn’t just a fun fact—it could be your secret weapon for figuring out which tournaments to follow closely or even aim for! Let’s face it, we all want to know where the big money is. Whether you dream of swinging for that major purse or you're just fascinated by how much cash is at stake for the top players, tracking these figures is like keeping your eye on the golden prize. Plus, who doesn't want to know which events pay out the most and whether your favorite golfer has a chance to score big this season?"
-        }
+        },
+        { 
+            src: '../Images/Posters/Data-Viz-3.png', 
+            link: '../Visualisation/data-viz-3.html',
+            description: "Ready to see who’s taking home the big bucks and the bragging rights? Dive into the 2024 tournament winners’ share and the valuable FedEx Cup points they’re racking up! Whether it’s a hefty paycheck or those coveted points, these pros are battling it out for the ultimate golf glory. Who will rise to the top of the leaderboard, not just in prize money, but in FedEx Cup fame? Let’s see who’s making a hole-in-one for both their bank accounts and their standings!"
+        },
     ];
 
     function handleImageClick() {
         // Navigate to the link of the currently displayed image when clicked
-        window.location.href = images[currentImage - 1].link;
+        window.location.href = images[currentImage].link;
     }
 
     imageDisplay.addEventListener('click', handleImageClick);
@@ -30,13 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
         imageDisplay.classList.add('hidden');
 
         setTimeout(function() {
-            // Toggle current image index to switch between the two available images
-            currentImage = (currentImage === 1) ? 2 : 1;
+            // Increment the current image index and loop back if at the end
+            currentImage = (currentImage + 1) % images.length;
 
-            imageDisplay.src = images[currentImage - 1].src;
-            description.textContent = images[currentImage - 1].description; 
+            imageDisplay.src = images[currentImage].src;
+            description.textContent = images[currentImage].description; 
 
             imageDisplay.classList.remove('hidden');
-        }, 600);// Wait for transition effect before changing the content
+        }, 600); // Wait for transition effect before changing the content
     });
 });

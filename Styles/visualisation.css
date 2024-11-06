@@ -20,8 +20,8 @@
 }
 
 .image {
-    width: 100%;/* Responsive width to fill the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 110%;/* Responsive width to fill the container */
+    height: 430px; /* Maintain aspect ratio */
     display: block;
     cursor: pointer; /* Indicate clickable image */
     transition: transform 0.3s ease;
@@ -49,13 +49,13 @@
     transition: transform 0.3s ease;
     cursor: pointer;
     z-index: 10;/* Ensure arrows are above other elements */
-    right: -50px;
+    right: -70px;
     opacity: 0.85;/* Slightly transparent for a subtle effect */
 }
 
 .arrow-left {
     right: unset;
-    left: -40px;
+    left: -60px;
 }
 
 .arrow:hover {
