@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Assignment 3: Commercial Website">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Amy Janse van Vuuren">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../Styles/global.css">
+  <link rel="stylesheet" href="../Styles/navbar.css">
+  <link rel="stylesheet" href="../Styles/footer.css">
+  <link rel="stylesheet" href="../Styles/responsive.css">
+  <link rel="stylesheet" href="../Styles/scrollbar.css">
+  <link rel="stylesheet" href="../Styles/form.css">
+  
+  <script src="../Scripts/nav.js" defer></script>
+  <script src="../Scripts/key-scroll.js" defer></script>
+  <script src="../Scripts/survey-form.js" defer></script>
+  
+  <title>Survey Page</title>
+</head>
+<body>
+  <header>
+      <hr>
+      <div class="header-container">
+          <h1>Survey</h1>
+      </div>
+      <hr>
+  </header>
+
+  <nav></nav>
+  
+  <p>We want to know what drives you (and your game)!</p>
+  
+  <main>
+    <section class="form-section">
+      <form id="golfSurveyForm">
+        <label for="name">Name:</label>
+        <span class="label-small">(What do they call you on the green?)</span>
+        <input type="text" id="name" name="name" required>
+        <span class="error-message" id="name-error"></span>
+
+        <label for="email">Email:</label>
+        <span class="label-small">(Where can we send tips to avoid sand traps...and spam?)</span>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="email-error"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error-message" id="password-error"></span>
+
+        <label for="phone">Phone Number:</label>
+        <span class="label-small">(Digits only, please—how else will we reach you if you get lost in the rough?)</span>
+        <input type="text" id="phone" name="phone" required>
+        <span class="error-message" id="phone-error"></span>
+
+        <!-- #5 Favorite Club (multiple choice checkboxes) -->
+        <label for="favorite-club">Favorite Club:</label>
+        <span class="label-small">(What’s your trusty club on the fairway?)</span>
+        <select id="favorite-club" name="favorite-club" required>
+          <option value="">Select one</option>
+          <option value="driver">Driver</option>
+          <option value="iron">Iron</option>
+          <option value="putter">Putter</option>
+          <option value="wedge">Wedge</option>
+          <option value="unsure">I’m still figuring it out</option>
+        </select>
+        <span class="error-message" id="favorite-club-error"></span>
+
+        <!-- #6 Golf Handicap (number only) -->
+        <label for="handicap">Golf Handicap:</label>
+        <span class="label-small">(Be honest; even pros had to start somewhere!)</span>
+        <input type="number" id="handicap" name="handicap" min="0" max="54" required>
+        <span class="error-message" id="handicap-error"></span>
+
+        <!-- #8 Preferred Tee Time (input time) -->
+        <label for="tee-time">Preferred Tee Time:</label>
+        <input type="time" id="tee-time" name="tee-time" required>
+        <span class="error-message" id="tee-time-error"></span>
+
+        <!-- #13 Love for Golf (slider with 10 points) -->
+        <label for="golf-love">On a Scale of 1 to Hole-in-One</label>
+        <span class="label-small">(Rate your love for golf!)</span>
+        <input type="range" id="golf-love" name="golf-love" min="1" max="10" step="1">
+        <div class="slider-values">
+          <span>1</span>
+          <span>Hole-in-One</span>
+        </div>
+        
+        <label for="message">Anything we can improve?:</label>
+        <span class="label-small">(Something realistic, don't say your handicap)</span>
+        <textarea id="message" name="message" maxlength="200" required></textarea>
+        <span class="error-message" id="message-error"></span>
+  
+        <button type="submit">Submit</button>
+        <p id="success-message" class="success-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span class="p-name">Amy Janse van Vuuren -</span>
+    <a class="u-email" href="mailto:fake@gmail.com"> fake@gmail.com -</a>
+    <span class="p-org"> University of the Witwatersrand -</span>
+    <span class="p-locality"> Johannesburg -</span>
+    <span class="p-country-name"> South Africa </span>
+  </footer>
+</body>
+</html>

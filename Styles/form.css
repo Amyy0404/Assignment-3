@@ -1,0 +1,114 @@
+.form-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #eddac6;
+    border-radius: 1px;
+    box-shadow: 0 4px 12px #3e332e;
+    background-image: url("../Images/Background/scorecard1.png");
+
+    background-size: cover;          /* Ensures the image covers the section */
+    background-position: center;     /* Centers the background image */
+    background-repeat: no-repeat;      
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bolder;
+    color: #619355;
+}
+
+.label-small {
+    display: block; /* This will place it on a new line */
+    font-size: 0.9em; /* Slightly smaller size */
+    color: #619355;
+    margin-top: 5px; /* Space between main label and small label */
+}
+
+input, select, textarea {
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 2px;
+    border: 2px solid #619355;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    background-color: #ecdac9;
+    background-image: url("../Images/Background/scorecard1.png");
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #619355;
+    outline: none;
+    box-shadow: 0 0 5px #619355;
+}
+
+button {
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #619355;
+    color: #eddac6;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #43663a;
+    box-shadow: 0 2px 2px #43663a;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin-top: 10px;
+    appearance: none;
+    background: #619355;
+    height: 1px;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-values {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+  
