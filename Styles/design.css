@@ -48,45 +48,6 @@ h2{
   text-align: justify;/* Align text for a professional look */
 }
 
-.bookmark-sidebar {
-  font-family: 'CustomFont3', sans-serif;
-  margin-top: 20px;
-  margin-left: 0px;
-  position: fixed; /* Keep the sidebar visible during scrolling */
-  width: 130px;
-  background-color: rgb(48, 93, 63);
-  padding: 5px;
-  border-radius: 3px;
-  z-index: 800;
-  opacity: 1;
-  background-image: url("../Images/Background/Test2.png");
-  transition: transform 0.3s ease;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0.2, 0.2);
-}
-
-.bookmark-sidebar:hover{
-  transform: scale(1.05);
-}
-
-.bookmark-sidebar ul {
-  list-style: none; /* Remove default bullet points for a cleaner look */
-  padding: 0;
-}
-
-.bookmark-sidebar ul li a {
-  font-family: 'CustomFont3', sans-serif;
-  font-weight: lighter;
-  font-size: 1em;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  display:flex;
-  transition: color 0.3s ease;
-}
-
-.bookmark-sidebar ul li a:hover {
-  color: rgb(184, 169, 151);
-}
-
 .image-text-row .text-container .website-link a:hover {
   color: #229641;  /* Highlight links in the text container for emphasis */
   text-decoration: underline;

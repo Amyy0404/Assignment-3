@@ -1,35 +1,99 @@
-/* Style the navigation bar with a soft background and padding for better spacing */
-nav {
-  background-color: rgb(247, 237, 217); 
-  padding: 10px 0;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+/* Ensure the body and html are set to full width and height to prevent scrolling issues */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body and html take up the full height */
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-/* Create a horizontal list for the navigation items to enhance accessibility and ease of navigation */
+/* Basic Navbar Styles (unchanged from your original CSS) */
+nav {
+  background-color: rgb(247, 237, 217);
+  padding: 9px 0;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
 nav ul {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  margin: 0 15px; 
+  margin: 0 30px;
+  position: relative; /* Needed for dropdown positioning */
 }
 
 nav ul li a {
   color: rgb(84, 155, 109);
-  font-size: 1.5em; 
-  padding: 10px; 
-  font-family: 'CustomFont3'; 
-  transition: background-color 0.3s ease;
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: 'CustomFont3';
+  height: 34px;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Creating a custom font to be used across the site for a unique look */
+nav ul li a:hover {
+  color: rgb(57, 105, 74);
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+/* Dropdown Styles */
+nav ul li .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+nav ul li .dropdown ul {
+  display: none; /* Hide the dropdown initially */
+  position: absolute;
+  top: 100%; /* Position it below the "DESIGNS" link */
+  left: -50%;
+  background-color: rgb(247, 237, 217);
+  padding-top: 5px;
+  margin: 0;
+  list-style-type: none;
+  transform: translateX(0);
+}
+
+nav ul li .dropdown:hover ul {
+  display: block; /* Show the dropdown when hovering over the parent */
+}
+
+nav ul li .dropdown ul li a {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(28, 34, 53);
+  padding: 2px 2px;
+  display: block;
+  text-decoration: none;
+}
+
+nav ul li .dropdown ul li a:hover {
+  color: rgb(84,155,109);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Ensure a smooth page scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom fonts for a unique look */
 @font-face {
   font-family: 'CustomFont4'; 
-  font-weight: bolder;
   src: url('../Fonts/ThinLong.otf') format('opentype'); 
   font-weight: lighter; 
   font-style: normal;

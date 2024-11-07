@@ -11,6 +11,7 @@
 }
 
 .button-image-container {
+    top: 120px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -31,7 +32,7 @@
 
 .description-container {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 220px;
 }
 
 .description-container p {
