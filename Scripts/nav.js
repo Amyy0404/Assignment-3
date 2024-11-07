@@ -4,7 +4,8 @@ const navLinks = [
     { text: 'DESIGNS', url: '../Design/index.html', isDropdown: true }, // 'DESIGNS' links to Design page
     { text: 'THEORY', url: '../Theory/index.html' },
     { text: 'VISUALISATIONS', url: '../Visualisation/Index.html' },
-    { text: 'MEDIA', url: '../Content/index.html' }
+    { text: 'MEDIA', url: '../Content/index.html' },
+    { text: 'SURVEY', url: '../Form/index.html' }
 ];
 
 // Sections for the dropdown under 'DESIGNS'
