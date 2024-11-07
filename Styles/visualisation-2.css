@@ -5,6 +5,16 @@ h2 {
     color: #4ea874;
     font-weight: lighter;
     font-family: 'CustomFont4', sans-serif;
+    letter-spacing: 8px;
+}
+
+h3 {
+    color: rgb(221, 205, 187); /* Match your color */
+    font-family: 'CustomFont4', sans-serif;
+    letter-spacing: 8px;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0.9;
 }
 
 #bubble-chart {
@@ -44,7 +54,7 @@ h2 {
     justify-content: center;
     font-family: 'CustomFont3', sans-serif; /* Match your font */
     font-size: 18px;
-    color: #4ea874; /* Match your color */
+    color: rgb(221, 205, 187); /* Match your color */
     background-image: url("../Images/Background/Test2.png");
 }
 

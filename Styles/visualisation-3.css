@@ -1,5 +1,5 @@
 html, body {
-    height: 150%; /* Ensure the page takes up the full height of the viewport */
+    height: 147%; /* Ensure the page takes up the full height of the viewport */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
   }
@@ -11,6 +11,17 @@ h2 {
     color: #4ea874;
     font-weight: lighter;
     font-family: 'CustomFont4', sans-serif;
+    letter-spacing: 8px;
+}
+
+h3 {
+    color: rgb(221, 205, 187); /* Match your color */
+    
+    font-family: 'CustomFont4', sans-serif;
+    letter-spacing: 8px;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0.9;
 }
 
 input[type="range"] {
@@ -84,7 +95,7 @@ input[type="checkbox"].fedex-checkbox:hover {
     justify-content: center;
     font-family: 'CustomFont3', sans-serif;
     font-size: 18px;
-    color: #4ea874; 
+    color: rgb(221, 205, 187); 
     background-image: url("../Images/Background/Test2.png");
 }
 

@@ -22,6 +22,7 @@ body {
     justify-content: center; 
     gap: 30px; 
     background-image: url("../Images/Background/Test2.png"); 
+    letter-spacing: 4px;
 }
 
 .header-container h1 {
