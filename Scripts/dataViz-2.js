@@ -42,7 +42,7 @@ fetch(url, options)
 
 
 // Set dimensions for the SVG container of the bubble chart
-let HEIGHT = 1000,
+let HEIGHT = 800,
     WIDTH = 1500;
 
 // Create the SVG element and style it for proper display in the container
@@ -52,7 +52,6 @@ let svg = d3
  .attr("height", HEIGHT)
  .attr("width", WIDTH)
  .style("display", "block")// Ensure the SVG is block-level for proper centering
- .style("margin", "0 auto");
 
 // Define a scaling function for bubble radius based on purse values
 let rScale = d3.scaleSqrt().range([5, 50]); 
@@ -63,7 +62,7 @@ let colorScale = d3.scaleOrdinal()
 
 // Configure forces for the simulation to manage bubble positioning
 const forceX = d3.forceX(WIDTH / 2).strength(0.05);
-const forceY = d3.forceY(HEIGHT * 0.4).strength(0.05);
+const forceY = d3.forceY(HEIGHT * 0.5).strength(0.05);
 const collideForce = d3.forceCollide(d => rScale(d.purse.$numberInt) + 2);// Prevent overlaps between bubbles
 const manyBody = d3.forceManyBody().strength(-30);// Apply repulsion to bubbles to space them out
 

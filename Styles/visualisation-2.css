@@ -9,6 +9,7 @@ h2 {
 
 #bubble-chart {
     text-align: center;/* Center the chart to align with overall layout and improve presentation */
+    margin-bottom: -10px;
 }
 
 #controls {
@@ -18,7 +19,6 @@ h2 {
 
 .description-container {
     text-align: center;
-    margin-top: 10px;
 }
 
 .description-container p {

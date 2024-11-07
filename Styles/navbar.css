@@ -35,12 +35,13 @@ nav ul li {
 
 nav ul li a {
   color: rgb(84, 155, 109);
-  font-size: 22px;
+  font-size: 25px;
   line-height: 1.5;
   font-family: 'CustomFont3';
   height: 34px;
   display: inline-block;
   transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -59,7 +60,7 @@ nav ul li .dropdown ul {
   display: none; /* Hide the dropdown initially */
   position: absolute;
   top: 100%; /* Position it below the "DESIGNS" link */
-  left: -50%;
+  left: -25%;
   background-color: rgb(247, 237, 217);
   padding-top: 5px;
   margin: 0;
@@ -84,6 +85,20 @@ nav ul li .dropdown ul li a:hover {
   color: rgb(84,155,109);
   font-weight: bold;
   text-decoration: none;
+}
+
+/* Dropdown arrow styling */
+nav ul li .dropdown > a::after {
+  content: " ▼"; /* Use a downward triangle symbol */
+  font-size: 16px;
+  margin-left: 5px;
+  color: inherit; /* Inherit link color */
+  transition: transform 0.3s ease; /* Optional smooth transition */
+}
+
+/* Optional rotation on hover */
+nav ul li .dropdown:hover > a::after {
+  transform: rotate(180deg); /* Arrow rotates on hover for visual effect */
 }
 
 /* Ensure a smooth page scroll */
