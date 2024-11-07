@@ -31,9 +31,11 @@
 
   <nav></nav>
   
-  <p>We want to know what drives you (and your game)!</p>
-  
   <main>
+    <p class="par-description">
+      We want to know what drives you (and your game)!
+   </p>
+    
     <section class="form-section">
       <form id="golfSurveyForm">
         <label for="name">Name:</label>
@@ -71,7 +73,7 @@
         <!-- #6 Golf Handicap (number only) -->
         <label for="handicap">Golf Handicap:</label>
         <span class="label-small">(Be honest; even pros had to start somewhere!)</span>
-        <input type="number" id="handicap" name="handicap" min="0" max="54" required>
+        <input type="number" id="handicap" name="handicap" min="-7" max="54" required>
         <span class="error-message" id="handicap-error"></span>
 
         <!-- #8 Preferred Tee Time (input time) -->
@@ -85,7 +87,7 @@
         <div class="slider-values">
           <span class="begin">Bunker</span>
           <span class="end">Hole-in-One</span>
-        </div>
+        </div> 
         
         <label for="message">Anything we can improve?:</label>
         <span class="label-small">(Something realistic, don't say your handicap)</span>

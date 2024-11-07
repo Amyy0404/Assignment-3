@@ -1,3 +1,19 @@
+.par-description {
+    margin-top: 25px;
+    font-size: 1.1em;
+    font-family: 'CustomFont3', sans-serif;
+    font-weight: bold;
+    color: rgb(225, 216, 207);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 2px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    line-height: 1.9;
+}
+
 .form-section {
     max-width: 600px;
     margin: 40px auto;
@@ -134,6 +150,52 @@ textarea {
 
 .slider-values .end {
     text-align: right; /* Align "Hole-in-One" to the right */
+}
+
+/* Style the select dropdown */
+#favorite-club {
+    font-family: 'CustomFont3', sans-serif; 
+    font-size: 16px; /* Adjust font size */
+    color: #619355; /* Text color */
+    padding: 8px;
+    border-radius: 2px;
+    border: 2px solid #619355;
+    background-color: #eddac6; /* Background color */
+    width: 60%; /* Full width to fit container */
+    margin-top: 5px;
+    height: 50px;
+}
+
+/* Style the options */
+#favorite-club option {
+    font-family: 'CustomFont3', sans-serif; 
+    font-size: 15px; /* Adjust font size */
+    color: #619355; /* Text color */
+    background-color: #eddac6; /* Background color */
+    padding: 2px; /* Padding around text */
+}
+
+input[type="number"] {
+    width: 10%;
+    font-size: 18px; /* Adjust font size */
+}
+
+input[type="time"] {
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+}
+
+input[type="time"]:focus {
+    border-color: #619355;
+    outline: none;
+    box-shadow: 0 0 5px #619355;
+}
+
+/* Optional: Remove the native datepicker UI for browsers that support it */
+input[type="time"]::-webkit-clear-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;  /* Hide the calendar icon in some browsers */
 }
 
 @font-face {

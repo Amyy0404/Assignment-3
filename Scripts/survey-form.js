@@ -47,7 +47,7 @@ document.getElementById("golfSurveyForm").addEventListener("submit", function (e
     }
   
     // Handicap validation
-    if (isNaN(handicap) || handicap < 0 || handicap > 54) {
+    if (isNaN(handicap) || handicap < -7 || handicap > 54) {
       document.getElementById("handicap-error").textContent = "Please enter a valid handicap between 0 and 54.";
       isValid = false;
     }
