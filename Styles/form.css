@@ -198,6 +198,26 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     display: none;  /* Hide the calendar icon in some browsers */
 }
 
+
+/* Style for the error messages */
+.error-message {
+    font-family: 'CustomFont3', sans-serif; 
+    color: #aa050d; /* Red color for errors */
+    font-size: 0.9rem; /* Slightly smaller than normal text */
+    margin-top: 5px; /* Adds space between input and error message */
+    display: flex;
+    align-items: center;
+}
+
+/* Style for success message */
+#success-message {
+    font-family: 'CustomFont3', sans-serif; 
+    color: #4F8A10; /* Green color for success */
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold; /* Makes the success message stand out */
+}
+
 @font-face {
     font-family: 'CustomFont3'; 
     src: url('../Fonts/MyFont3.otf') format('opentype'); 

@@ -22,21 +22,19 @@
 </head>
 <body>
   <header>
-      <hr>
-      <div class="header-container">
-          <h1>Survey</h1>
-      </div>
-      <hr>
+    <hr>
+    <div class="header-container">
+      <h1>Survey</h1>
+    </div>
+    <hr>
   </header>
 
   <nav></nav>
   
   <main>
-    <p class="par-description">
-      We want to know what drives you (and your game)!
-   </p>
+    <p class="par-description">We want to know what drives you (and your game)!</p>
     
-    <section class="form-section">
+    <section class="form-section" novalidate>
       <form id="golfSurveyForm">
         <label for="name">Name:</label>
         <span class="label-small">(What do they call you on the green?)</span>
@@ -57,7 +55,6 @@
         <input type="text" id="phone" name="phone" required>
         <span class="error-message" id="phone-error"></span>
 
-        <!-- #5 Favorite Club (multiple choice checkboxes) -->
         <label for="favorite-club">Favorite Club:</label>
         <span class="label-small">(What’s your trusty club on the fairway?)</span>
         <select id="favorite-club" name="favorite-club" required>
@@ -70,30 +67,27 @@
         </select>
         <span class="error-message" id="favorite-club-error"></span>
 
-        <!-- #6 Golf Handicap (number only) -->
         <label for="handicap">Golf Handicap:</label>
         <span class="label-small">(Be honest; even pros had to start somewhere!)</span>
         <input type="number" id="handicap" name="handicap" min="-7" max="54" required>
         <span class="error-message" id="handicap-error"></span>
 
-        <!-- #8 Preferred Tee Time (input time) -->
         <label for="tee-time">Preferred Tee Time:</label>
         <input type="time" id="tee-time" name="tee-time" required>
         <span class="error-message" id="tee-time-error"></span>
 
-        <!-- #13 Love for Golf (slider with 10 points) -->
-        <label for="golf-love">On a Scale of Bunker to Hole-in-One rate this website</label>
+        <label for="golf-love">On a Scale of Bunker to Hole-in-One rate this website:</label>
         <input type="range" id="golf-love" name="golf-love" min="1" max="10" step="1">
         <div class="slider-values">
           <span class="begin">Bunker</span>
           <span class="end">Hole-in-One</span>
         </div> 
-        
+
         <label for="message">Anything we can improve?:</label>
         <span class="label-small">(Something realistic, don't say your handicap)</span>
         <textarea id="message" name="message" maxlength="200" required></textarea>
         <span class="error-message" id="message-error"></span>
-  
+
         <button type="submit">Submit</button>
         <p id="success-message" class="success-message"></p>
       </form>
