@@ -1,11 +1,12 @@
 h2 {
     font-size: 2.5em;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-family: 'CustomFont4', sans-serif;
     letter-spacing: 6px;
     color: #4ea874; 
     font-weight: lighter;
+    margin-top: 40px;
 }
 
 .video-container {
@@ -92,12 +93,13 @@ h2 {
 
 .article-links { 
     text-align: center; 
-    margin: 20px 70px; 
+    margin: 0px 70px; 
     font-family: 'CustomFont3', sans-serif;
     background-color: rgb(200, 190, 179); 
     padding: 20px; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10%;
 }
 
 .article-links ul {
@@ -163,6 +165,71 @@ h2 {
     line-height: 25px;
 }
 
+/* Age Verification Styles */
+#age-verification {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    font-family: 'CustomFont3', sans-serif;
+    color: #3a7f5d;
+  }
+  
+  #age-verification input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: 'CustomFont3', sans-serif;
+    background-color: #e9e9df;
+    color: #3a7f5d;
+  }
+  
+  #age-verification button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4ea874;
+    color: rgb(248, 245, 241);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: 'CustomFont3', sans-serif;
+  }
+  
+  #age-verification button:hover {
+    background-color: #3a7f5d;
+  }
+  
+  #error-message {
+    color: rgb(201, 5, 5);
+    display: none;
+    margin-top: 10px;
+    font-family: 'CustomFont3', sans-serif;
+  }
+  
+  /* Over 18 Content Styles */
+  #over-18-content {
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-family: 'CustomFont3', sans-serif;
+    font-weight: bold;
+    color: rgb(225, 216, 207);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    text-align: justify;
+    line-height: 1.9;
+  }
+
+  .hidden {
+    display: none;
+  }
 
 @font-face {
     font-family: 'CustomFont4';
