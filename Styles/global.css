@@ -41,6 +41,11 @@ body {
     opacity: 0.8; 
 }
 
+.scroll-text {
+    color: rgb(75, 126, 69); 
+    text-align: center;
+}
+
 /* Animation on hover for golf club icons to enhance interactivity */
 .golf-club-left:hover {
     animation: rotateClubLeft 1.5s ease-in-out; 
