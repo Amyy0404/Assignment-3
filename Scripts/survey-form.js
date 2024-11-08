@@ -1,11 +1,11 @@
 document.getElementById("golfSurveyForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent form submission for validation testing
+  e.preventDefault();
 
   // Clear previous error messages
   document.querySelectorAll(".error-message").forEach(span => span.textContent = "");
   document.getElementById("success-message").textContent = "";
 
-  // Validate form fields
+  // Get form field values and trim whitespace
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
@@ -31,7 +31,7 @@ document.getElementById("golfSurveyForm").addEventListener("submit", function (e
       isValid = false;
   }
 
-  // Password validation
+  // Password validation 
   if (password.length < 8 || !/\d/.test(password) || !/[!@#$%^&*]/.test(password)) {
       document.getElementById("password-error").textContent = "Password must be at least 8 characters long and include numbers and special characters.";
       isValid = false;
@@ -55,7 +55,7 @@ document.getElementById("golfSurveyForm").addEventListener("submit", function (e
       isValid = false;
   }
 
-  // Handicap validation
+  // Handicap validation 
   if (isNaN(handicap) || handicap < 0 || handicap > 54) {
       document.getElementById("handicap-error").textContent = "Please enter a valid handicap between 0 and 54.";
       isValid = false;
@@ -70,20 +70,12 @@ document.getElementById("golfSurveyForm").addEventListener("submit", function (e
       isValid = false;
   }
 
-  // If all validations pass, show success message and reset form
+  // Display success message if all validations pass
   if (isValid) {
       document.getElementById("success-message").textContent = "Thank you! Your response has been received.";
 
       // Reset the form fields
       document.getElementById("golfSurveyForm").reset();
-
-      // Optionally, you can also remove the success message after a delay
-      setTimeout(() => {
-          document.getElementById("success-message").textContent = "";
-      }, 5000); // Clears the message after 5 seconds
-
-      // Alternatively, redirect the user to another page
-      // window.location.href = "thank-you.html";
   }
 });
 

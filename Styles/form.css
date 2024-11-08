@@ -23,8 +23,8 @@
     box-shadow: 0 4px 12px #3e332e;
     background-image: url("../Images/Background/scorecardxx.png");
 
-    background-size: cover;          /* Ensures the image covers the section */
-    background-position: center;     /* Centers the background image */
+    background-size: cover;         
+    background-position: center;     
     background-repeat: no-repeat;      
 }
 
@@ -43,10 +43,10 @@ label {
 }
 
 .label-small {
-    display: block; /* This will place it on a new line */
-    font-size: 0.9em; /* Slightly smaller size */
+    display: block;
+    font-size: 0.9em; 
     color: #619355;
-    margin-top: 5px; /* Space between main label and small label */
+    margin-top: 5px;
     font-family: 'CustomFont3', sans-serif; 
     font-size: 15px;
 }
@@ -118,22 +118,22 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
     background-color: #ffffff;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .slider-values {
-    width: 100%; /* Ensures the container spans the width of the form section */
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     margin-top: 5px;
-    padding: 0 50px; /* Optional: Adds some padding to keep labels from the edges */
-    box-sizing: border-box; /* Ensures padding is inside the width */
-    color: #619355; /* Match the label color if needed */
+    padding: 0 50px; 
+    box-sizing: border-box;
+    color: #619355;
     font-family: 'CustomFont3', sans-serif; 
     font-size: 16px;
 }
@@ -155,13 +155,13 @@ textarea {
 /* Style the select dropdown */
 #favorite-club {
     font-family: 'CustomFont3', sans-serif; 
-    font-size: 16px; /* Adjust font size */
-    color: #619355; /* Text color */
+    font-size: 16px; 
+    color: #619355; 
     padding: 8px;
     border-radius: 2px;
     border: 2px solid #619355;
-    background-color: #eddac6; /* Background color */
-    width: 60%; /* Full width to fit container */
+    background-color: #eddac6;
+    width: 60%;
     margin-top: 5px;
     height: 50px;
 }
@@ -169,15 +169,15 @@ textarea {
 /* Style the options */
 #favorite-club option {
     font-family: 'CustomFont3', sans-serif; 
-    font-size: 15px; /* Adjust font size */
-    color: #619355; /* Text color */
-    background-color: #eddac6; /* Background color */
-    padding: 2px; /* Padding around text */
+    font-size: 15px;
+    color: #619355;
+    background-color: #eddac6;
+    padding: 2px;
 }
 
 input[type="number"] {
     width: 10%;
-    font-size: 18px; /* Adjust font size */
+    font-size: 18px; 
 }
 
 input[type="time"] {
@@ -192,19 +192,18 @@ input[type="time"]:focus {
     box-shadow: 0 0 5px #619355;
 }
 
-/* Optional: Remove the native datepicker UI for browsers that support it */
 input[type="time"]::-webkit-clear-button,
 input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;  /* Hide the calendar icon in some browsers */
+    display: none;
 }
 
 
 /* Style for the error messages */
 .error-message {
     font-family: 'CustomFont3', sans-serif; 
-    color: #aa050d; /* Red color for errors */
-    font-size: 0.9rem; /* Slightly smaller than normal text */
-    margin-top: 5px; /* Adds space between input and error message */
+    color: #aa050d;
+    font-size: 0.9rem; 
+    margin-top: 5px;
     display: flex;
     align-items: center;
 }
@@ -212,10 +211,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* Style for success message */
 #success-message {
     font-family: 'CustomFont3', sans-serif; 
-    color: #4F8A10; /* Green color for success */
+    color: #4F8A;
     font-size: 1rem;
     margin-top: 10px;
-    font-weight: bold; /* Makes the success message stand out */
+    font-weight: bold; 
 }
 
 @font-face {

@@ -6,7 +6,7 @@
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="Amy Janse van Vuuren">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="stylesheet" href="../Styles/global.css">
   <link rel="stylesheet" href="../Styles/navbar.css">
   <link rel="stylesheet" href="../Styles/footer.css">
@@ -29,32 +29,38 @@
     <hr>
   </header>
 
-  <nav></nav>
-  
+  <nav></nav> 
+
   <main>
     <p class="par-description">We want to know what drives you (and your game)!</p>
-    
+
+    <!-- Form section for survey input, with validation -->
     <section class="form-section" novalidate>
       <form id="golfSurveyForm">
+        <!-- Name input -->
         <label for="name">Name:</label>
         <span class="label-small">(What do they call you on the green?)</span>
         <input type="text" id="name" name="name" required>
         <span class="error-message" id="name-error"></span>
 
+        <!-- Email input -->
         <label for="email">Email:</label>
         <span class="label-small">(Where can we send tips to avoid sand traps...and spam?)</span>
         <input type="email" id="email" name="email" required>
         <span class="error-message" id="email-error"></span>
 
+        <!-- Password input -->
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
         <span class="error-message" id="password-error"></span>
 
+        <!-- Phone number input -->
         <label for="phone">Phone Number:</label>
         <span class="label-small">(Digits only, please—how else will we reach you if you get lost in the rough?)</span>
         <input type="text" id="phone" name="phone" required>
         <span class="error-message" id="phone-error"></span>
 
+        <!-- Favorite club dropdown -->
         <label for="favorite-club">Favorite Club:</label>
         <span class="label-small">(What’s your trusty club on the fairway?)</span>
         <select id="favorite-club" name="favorite-club" required>
@@ -67,15 +73,18 @@
         </select>
         <span class="error-message" id="favorite-club-error"></span>
 
+        <!-- Handicap input -->
         <label for="handicap">Golf Handicap:</label>
         <span class="label-small">(Be honest; even pros had to start somewhere!)</span>
         <input type="number" id="handicap" name="handicap" min="-7" max="54" required>
         <span class="error-message" id="handicap-error"></span>
 
+        <!-- Preferred tee time input -->
         <label for="tee-time">Preferred Tee Time:</label>
         <input type="time" id="tee-time" name="tee-time" required>
         <span class="error-message" id="tee-time-error"></span>
 
+        <!-- Range input to rate the website -->
         <label for="golf-love">On a Scale of Bunker to Hole-in-One rate this website:</label>
         <input type="range" id="golf-love" name="golf-love" min="1" max="10" step="1">
         <div class="slider-values">
@@ -83,6 +92,7 @@
           <span class="end">Hole-in-One</span>
         </div> 
 
+        <!-- Text area for feedback -->
         <label for="message">Anything we can improve?:</label>
         <span class="label-small">(Something realistic, don't say your handicap)</span>
         <textarea id="message" name="message" maxlength="200" required></textarea>

@@ -1,8 +1,8 @@
 html, body {
-    height: 147%; /* Ensure the page takes up the full height of the viewport */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-  }
+    height: 147%;          
+    margin: 0;            
+    padding: 0;             
+}
 
 h2 {
     font-size: 2.5em;
@@ -15,13 +15,12 @@ h2 {
 }
 
 h3 {
-    color: rgb(221, 205, 187); /* Match your color */
-    
+    color: rgb(221, 205, 187); 
     font-family: 'CustomFont4', sans-serif;
     letter-spacing: 8px;
     text-align: center;
     font-size: 2em;
-    opacity: 0.9;
+    opacity: 0.9;             
 }
 
 input[type="range"] {
@@ -29,17 +28,19 @@ input[type="range"] {
     appearance: none;
     width: 300px;
     height: 8px;
-    background: #2c8053; 
+    background: #2c8053;
     border-radius: 5px;
     outline: none;
     opacity: 0.85;
     transition: opacity 0.2s;
 }
 
+/* Full opacity on hover */
 input[type="range"]:hover {
-    opacity: 1;
+    opacity: 1;                 
 }
 
+/* Slider */
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -51,13 +52,13 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-    background: rgb(238, 235, 231); 
+    background: rgb(238, 235, 231);
 }
 
 input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #1d5436;
+    background: #1d5436;        
     border-radius: 50%;
     cursor: pointer;
 }
@@ -70,7 +71,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type="checkbox"].fedex-checkbox {
-    accent-color: rgb(221, 209, 196); 
+    accent-color: rgb(221, 209, 196);
     width: 15px;
     height: 15px;
     cursor: pointer;
@@ -79,7 +80,7 @@ input[type="checkbox"].fedex-checkbox {
 input[type="checkbox"].fedex-checkbox:hover {
     accent-color: rgb(239, 233, 226);
     width: 18px;
-    height: 18px;  
+    height: 18px;            
 }
 
 .loading {
@@ -95,8 +96,8 @@ input[type="checkbox"].fedex-checkbox:hover {
     justify-content: center;
     font-family: 'CustomFont3', sans-serif;
     font-size: 18px;
-    color: rgb(221, 205, 187); 
-    background-image: url("../Images/Background/Test2.png");
+    color: rgb(221, 205, 187);
+    background-image: url("../Images/Background/Test2.png"); 
 }
 
 .description-container {
@@ -110,20 +111,19 @@ input[type="checkbox"].fedex-checkbox:hover {
     padding-left: 290px;
     padding-right: 290px;
     line-height: 1.5;
-    text-align: justify;
+    text-align: justify;      
 }
 
 @font-face {
     font-family: 'CustomFont4';
-    font-weight: bolder;
     src: url('../Fonts/ThinLong.otf') format('opentype');
     font-weight: lighter;
-    font-style: normal;
-  }
+    font-style: normal;   
+}
 
-  @font-face {
+@font-face {
     font-family: 'CustomFont3';
     src: url('../Fonts/ShortWide.ttf') format('truetype');
     font-weight: lighter;
     font-style: normal;
-  }
+}
