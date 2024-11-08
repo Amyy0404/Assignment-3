@@ -121,6 +121,7 @@ let tooltip = d3
  .style("visibility", "hidden")
  .style("color", "white")
  .style("font-size", "17px")
+ .style("line-height","20px")
  .style("pointer-events", "none");// Prevent tooltip from interfering with mouse events
 
 // Function to show tooltip with relevant data on hover
@@ -128,7 +129,7 @@ function showTooltip(d) {
  const purse = d.purse?.$numberInt || 'N/A'; 
  const winnersShare = d.winnersShare?.$numberInt || 'N/A'; 
 
- tooltip.html(`<strong>${d.name}</strong><br>Purse: $${purse}<br>Winners Share: $${winnersShare}`)
+ tooltip.html(`<strong>${d.name}</strong><br>Purse: $${purse}`)
      .style("visibility", "visible")
      .style("left", `${event.pageX + 10}px`)
      .style("top", `${event.pageY + 10}px`);
