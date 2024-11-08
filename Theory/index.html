@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../Styles/theory.css">
 
   <script src="../Scripts/nav.js" defer></script>
+  <script src="../Scripts/toggle-essay.js" defer></script>
   <script src="./Scripts/key-scroll.js" defer></script>
 
   <title>Theory Page</title>
@@ -31,13 +32,15 @@
 
  <nav></nav>
 
- <h2 style="color: #4ea874; font-weight: lighter;">ESSAYS</h2>
+</main>
+ <h2>ESSAYS</h2>
  <!-- Download link for easy access to the essay -->
-  <div class="download-section">
+  <section class="download-section">
     <a href="../Media/Essay.docx" download class="download-button">
       Download my essay on Data Visualisation
       <img src="../Images/Icons/download icon.png" alt="Download icon" class="download-icon">
     </a>
+  </section>
     <!-- Brief overview of the essay to entice readers and explain its significance -->
     <p class="essay-description">
        In our increasingly data-driven world, the challenge lies not just in collecting information but in presenting it in a way that is 
@@ -48,43 +51,77 @@
        a deeper understanding of the underlying data. This exploration serves to underscore the importance of presenting data in a way that 
        resonates with viewers, ultimately bridging the gap between raw numbers and impactful narratives.
     </p>
-  </div>
+    <section class="download-section">
+    <button class="toggle-essay" onclick="toggleEssay()">Read it now</button>
+    </section>
+ 
+    <div id="essay-container" class="essay-container" style="display: none;">
+      <p>In today's data-driven world, data journalism has become essential for uncovering complex issues and presenting them in a manner that the public can understand. As emphasised by Cairo (2012), the influence of visual storytelling lies in its ability to transform raw data into meaningful insights. He mentions that by creating visuals that invite exploration, data journalists can enhance the public's understanding and foster a deeper engagement with the information presented. Looking at the data journalism project Out of Sight, Out of Mind (2013), I will analyse the effectiveness of the visualisation techniques used, the importance of interactivity, the application of UI/UX design principles, and the integration of narrative elements to effectively communicate its message.
+      </p>
+      <p>Out of Sight, Out of Mind (2013) effectively uses different data visualisation techniques to communicate complex information about drone usage and its impact, particularly on the victims involved, without relying heavily on text. According to Sinar (2020), data visualisation involves employing various methods to display information in a way that is both comprehensible and visually appealing, enhancing user engagement and capturing the audience's attention. The project uses a combination of interactive elements, stacked bar charts, timelines, animations and various colour choices. These techniques are employed because Pitch Interactive (2007) aimed to present the information in a way that allows users to form their own opinions on the use of drones.
+      </p>
+      <p>This approach aligns with Cairo's (2012) discussion on how effective data visualisation must consider the audience's familiarity with the visual forms that are being used. Using recognisable visual elements like Out of Sight, Out of Mind (2013) makes the data more accessible, ensuring that users can easily comprehend the information presented. The stacked bar chart is used to display the individual number of people killed during a drone attack, with each smaller block representing a death, and the labels that appear when users hover over the bars provide additional context, such as the date of the attack, the number of attacks, the number of casualties, and their classifications.
+      </p>
+      <p>Nguyen et al. (2014) highlight how visualising the timeline, which ranges from 2004 to 2015, is another crucial element that enhances the project's effectiveness. According to Nguyen et al. (2014), allowing users to identify patterns and relationships in the visualisation helps them comprehend the data presented better. In Out of Sight, Out of Mind (2013) this would help improve the understanding of the sequences, frequency and distribution of drone attacks over the years to the users.
+      </p>
+      <p>Moreover, Out of Sight, Out of Mind (2013) successfully manages the complexity of multiple visualisations, enabling users to navigate between different views, such as the horizontal timeline and the 'Victims' tab, which sums up the number of victims by month on a vertical timeline. Heer and Schneiderman (2012) mention that this design technique simplifies the organisation of visual elements, making it easier for users to explore different aspects of the data without feeling overwhelmed.
+      </p>
+      <p>Colour plays a significant role in the project's overall design. Out of Sight, Out of Mind (2013) uses a dark colour palette, with prominent use of white, red, and black, to convey the seriousness of the subject matter. The careful selection of colours helps the viewers to process the given information without distraction, adhering to Sinar's (2020) statement that colour choices should support, rather than diminish, the message being conveyed by the visualisation.
+      </p>
+      <p>Out of Sight, Out of Mind (2013) shows the critical role of interactivity in big data visualisation, as outlined by the Yi et al. (2007) taxonomy of Interaction Techniques. The project utilises several of these techniques to enhance user engagement and understanding. One of the main techniques used is Selection, where users can hover over specific data points representing individual drone strikes. Yi et al. (2007) explain that this type of interaction allows for a deeper investigation into each of the strikes, with more details provided on demand. This selection process facilitates the users' ability to track cases and return to them as they explore the project further.
+      </p>
+      <p>Furthermore, the visualisation utilises Visual Encoding effectively, as explained by Yi et al. (2007), Out of Sight, Out of Mind (2013) successfully achieves this by representing different types of targets and casualties through varying colours, which improves the interpretability of the data. The final Interaction Technique from Yi et al.’s (2007) taxonomy is Connecting, which is utilised by linking related data points across the timeline of the drone strikes. This allows users to see patterns and relationships between different strikes and victims over time, creating a deeper understanding of the effect and frequency of these events.
+      </p>
+      <p>Out of Sight, Out of Mind (2013) highlights key elements of good UI/UX design. Cairo (2012) discusses a structured process that begins with a clear focus on the topic, followed by thorough research and which finally ends in a visually appealing visualisation. Looking at Out of Sight, Out of Mind (2013), this approach is clear in its design, it effectively integrates UI/UX principles to enhance user interaction and engagement in the project.
+      </p>
+      <p>Out of Sight, Out of Mind (2013) begins with a clear focus on its narrative: the impact of drone strikes. This focus is reflected in the design’s organisation, where users can interact with the information underneath the timeline to explore detailed data about each drone attack. By enabling users to hover for more details, the project follows Cairo’s (2013) principle of ensuring that the infographic is useful and provides meaningful insights to the audience. This interactive feature not only aligns with the project's goals but also enhances the user experience by making complex data more accessible and engaging for users.
+      </p>
+      <p>Additionally, Cairo’s (2013) approach highlights the importance of structuring information in a visually appealing way. Out of Sight, Out of Mind (2013) achieves this through its thoughtful use of interactive elements. The timeline and the 'Victims' tab are designed to offer different perspectives on the data, allowing users to navigate and understand the information in a way that suits their needs. This reflects Cairo’s (2013) emphasis on presenting findings in a structured manner that facilitates user interaction and comprehension.
+      </p>
+      <p>Segel and Heer (2010) state that storytelling in data visualisation aims to engage users, present complex information in an accessible way, and evoke emotional responses or provoke thought. According to Segel and Heer (2010), while data visualisation is often associated with storytelling, the precise relationship between the two is not always clear. They argue that understanding how different genres of visualisation interact with audiences is crucial to improving the way stories are told through data. In the Out of Sight, Out of Mind (2013) project, storytelling principles are effectively utilised to convey the seriousness of drone attacks and their impact on the victims. This aligns with Segel and Heer's (2010) notion that narrative visualisation should create a connection with the audience by providing meaningful context.
+      </p>
+      <p>The project's use of colour and minimalist design contributes to a sombre and reflective tone, enhancing the emotional weight of the data being presented. Knaflic (2015) stresses the importance of pairing strong visuals with a compelling narrative to create an impactful data visualisation. In Out of Sight, Out of Mind (2013), the visual simplicity, combined with interactive storytelling elements such as the animations landing on the timeline to represent the drone strikes, creates a powerful narrative experience that encourages users to think critically about the impact of drones used for violence. Knaflic (2015) discusses how the combination of narrative and visualisation ensures that the data is not only seen but felt, making the project a good example of how data visualisation can be used to tell an emotionally compelling story.
+      </p>
+      <p>In conclusion, the data visualisation project Out of Sight, Out of Mind (2013), found on the National Geographic website demonstrates the impact of data journalism, UI/UX design, and visual storytelling. Through a combination of interactive elements, minimalist design, and carefully selected visual techniques, the project effectively conveys the results of drone strikes. By aligning with the principles discussed by Cairo (2012) and others, the project transforms complex data, from The Bureau of Investigative Journalism, into a compelling narrative that resonates with its audience. This highlights how the interactive features and careful design not only engage users with the data presented but also deepen their understanding of it, illustrating the crucial role of visual storytelling in data-driven journalism and its effectiveness in communicating serious issues.
+      </p>
+    </div>
 
- <h2 style="color: #4ea874; font-weight: lighter;">REFLECTION</h2>
+ <h2>REFLECTION</h2>
  <p class="par-description">
   Reflecting on my journey with D3 and the development of my data visualizations and website, I began with a clear thematic focus: golf. This choice 
   stemmed from my passion for the sport and the desire to create a visually appealing and engaging web experience that resonates with 
   fellow golf enthusiasts. With a theme in mind, I then turned my attention to the technical aspects, particularly exploring various APIs 
   to source relevant data. After some experimentation, I ultimately decided on RapidAPI, which provided a robust platform for accessing 
   dynamic golf-related data.
-<br>
-<br>
+</p>
+<p class="par-description">
   Once I secured my data source, I contemplated the best ways to present the information. I determined that a bar graph and a bubble graph 
   would effectively communicate the rankings of top golf players in 2024 and the purse sizes of various tournaments. This decision was not 
   merely about aesthetics; it was essential to ensure that the data was easily digestible and visually engaging.
-<br>
-<br>
+</p>
+<p class="par-description">
   In crafting the overall aesthetic, I made a concerted effort to maintain a clean, sophisticated look that aligns with the golf theme. 
   Drawing inspiration from notable websites like St. Andrews Links and Ralph Lauren, I aimed for a blend of elegance and functionality. 
   I selected a color palette that featured neutral tones with vibrant accents to guide user attention to key interactive elements. This 
   thoughtful design choice was critical to fostering a welcoming and professional atmosphere.
-<br>
-<br>
+</p>
+<p class="par-description">
   Accessibility was also a priority in my design process. I utilized a color contrast checker to ensure readability, selected clear and 
   legible fonts, and implemented user-friendly navigation features, including a side scroll bar, a top navigation bar, intuitive button 
   UI, and "bookmarks." While I focused on creating an engaging user interface, I recognize that my website's responsiveness still needs 
   improvement. I plan to address this as I prepare for my upcoming exam.
-<br>
-<br>
+</p>
+<p class="par-description">
   Throughout the development phase, I actively sought feedback from friends who tested my website. Their insights were invaluable, prompting 
   me to make several adjustments, such as refining font choices, enhancing background designs, adding hover effects to links, adjusting graph 
   colors, and modifying navigation buttons and images. This collaborative approach significantly enriched the user experience.
-<br>
-<br>
+</p>
+<p class="par-description">
   Instead of a conventional "About Me" page, I opted for a "Media" page, aiming to share more golf-related content, including articles 
   and podcasts. This decision was driven by my goal to create a commercial vibe for the website while providing valuable resources to visitors 
   interested in golf.
 </p>
+</main>
 
   <footer>
     <span class="p-name">Amy Janse van Vuuren -</span>
